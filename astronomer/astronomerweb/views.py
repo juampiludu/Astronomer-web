@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 
 def principal(request):
-    return render(request, 'base.html')
+    return redirect('/my-weight')
 
 def weight(request):
     return render(request, 'weight.html')

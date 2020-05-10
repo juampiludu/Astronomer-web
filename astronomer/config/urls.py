@@ -19,6 +19,6 @@ from astronomerweb import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('principal/', views.principal),
-    path('', views.weight),
+    path('', views.principal),
+    path('my-weight', views.weight),
 ]

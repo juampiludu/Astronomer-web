@@ -8,12 +8,13 @@
     <div class="col s6 offset-s3">
         <div class="input-field">
             <i id="arrow" class="material-icons prefix">arrow_forward</i>
-            <input id="input_text" type="number" autocomplete="off" data-length="10" step="any" min="0">
+            <input id="input_text" type="number" autocomplete="off" data-length="20" step="any" min="0">
             <label for="input_text" type="text">Enter your weight in kg:</label>
+            <span style="color: white;" class="helper-text invalid" data-error="The number cannot be longer than 20 digits."></span>
         </div>
     </div>
     <div class="col s6 offset-s4">
-        <button id="weight_button" class="btn-large waves-effect waves-light" type="submit">CALCULATE!</button>
+        <button id="weight_button" class="btn-large waves-effect waves-light" type="button" onclick="operation();">CALCULATE!</button>
     </div>
 </div>
 <div class="center-align">
@@ -25,38 +26,47 @@
     <div id="planet-div">
         <h5 style="color: white;">Venus</h5>
         <img id="venus" src="{% static 'venus.png' %}">
+        <p id="text_venus"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Earth</h5>
         <img id="earth" src="{% static 'earth.png' %}">
+        <p id="text_earth"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Moon</h5>
         <img id="moon" src="{% static 'moon.png' %}">
+        <p id="text_moon"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Mars</h5>
         <img id="mars" src="{% static 'mars.png' %}">
+        <p id="text_mars"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Jupiter</h5>
         <img id="jupiter" src="{% static 'jupiter.png' %}">
+        <p id="text_jupiter"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Saturn</h5>
         <img id="saturn" src="{% static 'saturn.png' %}">
+        <p id="text_saturn"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Uranus</h5>
         <img id="uranus" src="{% static 'uranus.png' %}">
+        <p id="text_uranus"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Neptune</h5>
         <img id="neptune" src="{% static 'neptune.png' %}">
+        <p id="text_neptune"></p>
     </div>
     <div id="planet-div">
         <h5 style="color: white;">Pluto</h5>
         <img id="pluto" src="{% static 'pluto.png' %}">
+        <p id="text_pluto"></p>
     </div>
 </div>
 
