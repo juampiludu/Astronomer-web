@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col s6 offset-s3">
+        <div class="input-field">
+            <i id="arrow" class="material-icons prefix">arrow_forward</i>
+            <input id="input_text" type="number" autocomplete="off" data-length="10" step="any" min="0">
+            <label for="input_text" type="text">Enter your weight in kg:</label>
+        </div>
+    </div>
+    <div class="col s6 offset-s4">
+        <button id="weight_button" class="btn-large waves-effect waves-light" type="submit">CALCULATE!</button>
+    </div>
+</div>
+<div class="center-align">
+    <div id="planet-div">
+        <h5 style="color: white;">Mercury</h5>
+        <img id="mercury" src="{% static 'mercury.png' %}">
+        <p id="text_mercury"></p>
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Venus</h5>
+        <img id="venus" src="{% static 'venus.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Earth</h5>
+        <img id="earth" src="{% static 'earth.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Moon</h5>
+        <img id="moon" src="{% static 'moon.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Mars</h5>
+        <img id="mars" src="{% static 'mars.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Jupiter</h5>
+        <img id="jupiter" src="{% static 'jupiter.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Saturn</h5>
+        <img id="saturn" src="{% static 'saturn.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Uranus</h5>
+        <img id="uranus" src="{% static 'uranus.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Neptune</h5>
+        <img id="neptune" src="{% static 'neptune.png' %}">
+    </div>
+    <div id="planet-div">
+        <h5 style="color: white;">Pluto</h5>
+        <img id="pluto" src="{% static 'pluto.png' %}">
+    </div>
+</div>
+
+{% endblock %}

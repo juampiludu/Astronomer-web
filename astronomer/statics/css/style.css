@@ -1,0 +1,306 @@
+/* nav */
+
+.nav-wrapper {
+    background-color: #041138 !important;
+}
+
+/* sidenav */
+
+.sidenav {
+    background-color: #041138 !important;
+}
+
+/* nav text */
+
+.nav-text {
+    color: white !important;
+}
+
+nav ul li.active a.nav-text {
+    background-color: #01081f;
+}
+
+/* divs */
+
+.col {
+    margin-top: 20px;
+}
+
+/* materialize inputs */
+
+#arrow {
+    color: white;
+}
+
+#input_text {
+    color: white;
+}
+
+.input-field {
+    color: white;
+    min-width: 200px;
+}
+
+/* label focus color */
+
+.input-field input:focus+label {
+    color: white !important;
+}
+
+.input-field input[type].invalid, .input-field input[type].invalid:focus {
+    border-bottom: 1px solid red !important;
+    box-shadow: 0 1px 0 0 red !important
+}
+
+.input-field input[type].invalid+label, .input-field input[type].invalid:focus+label {
+    color: red !important;
+}
+
+/* label underline focus color */
+
+.row .input-field input:focus {
+    border-bottom: 1px solid white !important;
+    box-shadow: 0 1px 0 0 white !important
+}
+
+/* scroll */
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: fixed;
+    background-color: black;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+/* btns */
+
+#weight_button {
+    background-color: #041138;
+    border-radius: 30px;
+    width: 220px;
+    min-width: 120px;
+    margin-left: 17%;
+}
+
+/* planets */
+
+.center-align {
+    align-content: center;
+}
+
+#planet-div {
+    float: left;
+    clear: both;
+    margin-left: 45%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#mercury {
+    width: 130px;
+}
+
+#venus {
+    width: 130px;
+}
+
+#earth {
+    width: 130px;
+}
+
+#moon {
+    width: 130px;
+}
+
+#mars {
+    width: 130px;
+}
+
+#jupiter {
+    width: 130px;
+}
+
+#saturn {
+    width: 130px;
+}
+
+#uranus {
+    width: 130px;
+}
+
+#neptune {
+    width: 130px;
+}
+
+#pluto {
+    width: 130px;
+}
+
+p {
+    color: white;
+}
+
+/* devices */
+
+@media all and (min-width:960px) and (max-width: 1024px) {
+    #weight_button {
+        background-color: #041138;
+        border-radius: 30px;
+        width: 220px;
+        min-width: 120px;
+        margin-left: -50px;
+    }
+    .input-field {
+        margin-left: -35px;
+    }
+    #planet-div {
+        float: left;
+        clear: both;
+        margin-left: 35%;
+    }
+}
+
+@media all and (min-width:801px) and (max-width: 959px) {
+    /* put your css styles in here */
+    #weight_button {
+        background-color: #041138;
+        border-radius: 30px;
+        width: 220px;
+        min-width: 120px;
+        margin-left: 20px;
+    }
+    .input-field {
+        margin-left: -15px;
+    }
+    #planet-div {
+        float: left;
+        clear: both;
+        margin-left: 35%;
+    }
+}
+
+@media all and (min-width:769px) and (max-width: 800px) {
+    /* put your css styles in here */
+    #weight_button {
+        background-color: #041138;
+        border-radius: 30px;
+        width: 220px;
+        min-width: 120px;
+        margin-left: -50px;
+    }
+    .input-field {
+        margin-left: -35px;
+    }
+    #planet-div {
+        float: left;
+        clear: both;
+        margin-left: 35%;
+    }
+}
+
+@media all and (min-width:569px) and (max-width: 768px) {
+    /* put your css styles in here */
+    #weight_button {
+        background-color: #041138;
+        border-radius: 30px;
+        width: 220px;
+        min-width: 120px;
+        margin-left: -20px;
+    }
+    .input-field {
+        margin-left: -25px;
+    }
+    #planet-div {
+        float: left;
+        clear: both;
+        margin-left: 35%;
+    }
+}
+
+@media all and (min-width:481px) and (max-width: 568px) {
+    /* put your css styles in here */
+    #weight_button {
+        background-color: #041138;
+        border-radius: 30px;
+        width: 220px;
+        min-width: 120px;
+        margin-left: -50px;
+    }
+    .input-field {
+        margin-left: -35px;
+    }
+    #planet-div {
+        float: left;
+        clear: both;
+        margin-left: 35%;
+    }
+}
+
+@media all and (min-width:321px) and (max-width: 480px) {
+    /* put your css styles in here */
+    #weight_button {
+        background-color: #041138;
+        border-radius: 30px;
+        width: 220px;
+        min-width: 120px;
+        margin-left: -50px;
+    }
+    .input-field {
+        margin-left: -35px;
+    }
+    #planet-div {
+        float: left;
+        clear: both;
+        margin-left: 35%;
+    }
+}
+
+@media all and (min-width:0px) and (max-width: 320px) {
+    /* put your css styles in here */
+    #weight_button {
+        background-color: #041138;
+        border-radius: 30px;
+        width: 220px;
+        min-width: 120px;
+        margin-left: -50px;
+    }
+    .input-field {
+        margin-left: -35px;
+    }
+    #planet-div {
+        float: left;
+        clear: both;
+        margin-left: 35%;
+    }
+}
