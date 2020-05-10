@@ -4,13 +4,6 @@ $(document).ready(function () {
     $('input#input_text').characterCounter();
     M.updateTextFields();
 
-    /*$('#weight_button').click(function () {
-        var int1 = $('#input_text').text();
-        var hol = parseFloat(int1);
-        var op1 = hol + 10;
-        $('#text_mercury').html(op1);
-    });*/
-
 });
 
 $(document).on('click', 'ul li', function () {
@@ -29,7 +22,8 @@ const neptune = 11.15;
 const pluto = 0.62;
 
 function operation() {
-    var kg = document.getElementById("input_text").value; 
+
+    var kg = document.getElementById("input_text").value;
     var op1 = (parseFloat(kg) * mercury) / earth;
     var op2 = (parseFloat(kg) * venus) / earth;
     var op3 = (parseFloat(kg) * moon) / earth;
@@ -49,4 +43,23 @@ function operation() {
     document.getElementById("text_neptune").innerText = op8.toFixed(2) + " kg";
     document.getElementById("text_pluto").innerText = op9.toFixed(2) + " kg";
     document.getElementById("text_earth").innerText = kg + " kg";
+
+}
+
+var btn = $("#weight_button")
+
+function disableButton() {
+
+    if (String(document.getElementById("input_text").value).length > 20) {
+        btn.attr("disabled", "disabled");
+    }
+
+}
+
+function enableButton() {
+
+    if (String(document.getElementById("input_text").value).length <= 20) {
+        btn.removeAttr("disabled");
+    }
+
 }
