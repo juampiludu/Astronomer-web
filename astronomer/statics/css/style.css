@@ -8,6 +8,11 @@ main {
     flex: 1 0 auto;
 }
 
+#coll-header {
+    background-color: #041138;
+    color: white;
+}
+
 /* nav */
 
 .nav-wrapper {

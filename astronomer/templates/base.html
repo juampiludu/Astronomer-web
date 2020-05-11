@@ -15,64 +15,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
-<body style="background-color: black;">
+<nav>
+    <div class="nav-wrapper">
+        <a href="/my-weight" class="brand-logo show-on-medium-and-up" style="margin-left: 2%;"><i><img
+                    class="right hide-on-med-and-down" src="{% static 'ic_launcher_foreground.png' %}"
+                    width="65px"></i>Astronomer</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
+                            src="{% static 'escala.png' %}" width="24px"></i>My Weight</a></li>
+            <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
+                            src="{% static 'rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
+            <li><a class='nav-text' href="/about"><i class="material-icons left"><img src="{% static 'signs.png' %}"
+                            width="24px"></i>About</a></li>
+        </ul>
+    </div>
+</nav>
 
-    <div id="particles-js"></div>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo show-on-medium-and-up" style="margin-left: 2%;"><i><img
-                        class="right hide-on-med-and-down" src="{% static 'ic_launcher_foreground.png' %}"
-                        width="65px"></i>Astronomer</a>
-            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="active"><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
-                                src="{% static 'escala.png' %}" width="24px"></i>My Weight</a></li>
-                <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
-                                src="{% static 'rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
-                <li><a class='nav-text' href="/about"><i class="material-icons left"><img src="{% static 'signs.png' %}"
-                                width="24px"></i>About</a></li>
-            </ul>
+<ul class="sidenav" id="mobile-nav">
+    <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img src="{% static 'escala.png' %}"
+                    width="24px"></i>My Weight</a></li>
+    <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
+                    src="{% static 'rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
+    <li><a class='nav-text' href="/about"><i id="info-sidenav" class="material-icons left"><img
+                    src="{% static 'signs.png' %}" width="24px"></i>About</a></li>
+</ul>
+
+{% block content %}
+{% endblock %}
+<footer class="page-footer" style="background-color: #041138;">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Get the Android application</h5>
+                <p class="grey-text text-lighten-4">by pressing <a href="https://bit.ly/2ReNrCl"
+                        target="_blank">here</a>.</p>
+            </div>
         </div>
-    </nav>
-
-    <ul class="sidenav" id="mobile-nav">
-        <li class="active"><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
-                        src="{% static 'escala.png' %}" width="24px"></i>My Weight</a></li>
-        <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img src="{% static 'rueda-dentada.png' %}"
-                        width="24px"></i>Next Eclipses</a></li>
-        <li><a class='nav-text' href="/about"><i id="info-sidenav" class="material-icons left"><img
-                        src="{% static 'signs.png' %}" width="24px"></i>About</a></li>
-    </ul>
-
-    {% block content %}
-    {% endblock %}
-    <footer class="page-footer" style="background-color: #041138;">
+    </div>
+    <div class="footer-copyright">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Get the Android application</h5>
-                    <p class="grey-text text-lighten-4">by pressing <a href="https://bit.ly/2ReNrCl"
-                            target="_blank">here</a>.</p>
-                </div>
+            © 2020 developed by ludev
+            <div class="right">
+                <img src="{% static 'github.png' %}" style="width: 15px;">
+                <a class="grey-text text-lighten-4" href="https://github.com/juampiludu/Astronomer-web" target="_blank">
+                    GitHub</a>
             </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2020 developed by ludev
-                <div class="right" style="display:inline; white-space:nowrap;">
-                    <img src="{% static 'github.png' %}" style="width: 15px;">
-                    <a class="grey-text text-lighten-4" href="https://github.com/juampiludu/Astronomer-web"
-                        target="_blank">   GitHub</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
-    <script type="text/javascript" src="{% static 'js/function.js' %}"></script>
-    <script src="{% static 'js/particles.js' %}"></script>
-    <script src="{% static 'js/app.js' %}"></script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
+<script type="text/javascript" src="{% static 'js/function.js' %}"></script>
+<script src="{% static 'js/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </html>

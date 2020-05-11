@@ -3,20 +3,11 @@ $(document).ready(function () {
     $('.sidenav').sidenav();
     $('input#input_text').characterCounter();
     $('.modal').modal();
+    $('.parallax').parallax();
+    $('.collapsible').collapsible();
+    /*$('.tooltipped').tooltip();*/
     M.updateTextFields();
 
-    /*$('#planet-div').mouseover(function () {
-        $('#info_button').addClass('btn-floating btn-large waves-effect waves-light red');
-    });
-
-    $('#planet-div').mouseout(function () {
-        $('#info_button').removeClass('btn-floating btn-large waves-effect waves-light red');
-    });*/
-
-});
-
-$(document).on('click', 'ul li', function () {
-    $(this).addClass('active').siblings().removeClass('active');
 });
 
 const earth = 9.807;
