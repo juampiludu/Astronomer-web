@@ -25,27 +25,48 @@
                         width="65px"></i>Astronomer</a>
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="active"><a class='nav-text' href="#"><i class="material-icons left"><img
+                <li class="active"><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
                                 src="{% static 'escala.png' %}" width="24px"></i>My Weight</a></li>
-                <li><a class='nav-text' href="#"><i class="material-icons left"><img
+                <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
                                 src="{% static 'rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
-                <li><a class='nav-text' href="#"><i class="material-icons left"><img src="{% static 'signs.png' %}"
+                <li><a class='nav-text' href="/about"><i class="material-icons left"><img src="{% static 'signs.png' %}"
                                 width="24px"></i>About</a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-nav">
-        <li class="active"><a class='nav-text' href="#"><i class="material-icons left"><img
+        <li class="active"><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
                         src="{% static 'escala.png' %}" width="24px"></i>My Weight</a></li>
-        <li><a class='nav-text' href="#"><i class="material-icons left"><img src="{% static 'rueda-dentada.png' %}"
+        <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img src="{% static 'rueda-dentada.png' %}"
                         width="24px"></i>Next Eclipses</a></li>
-        <li><a class='nav-text' href="#"><i id="info-sidenav" class="material-icons left"><img
+        <li><a class='nav-text' href="/about"><i id="info-sidenav" class="material-icons left"><img
                         src="{% static 'signs.png' %}" width="24px"></i>About</a></li>
     </ul>
 
     {% block content %}
     {% endblock %}
+    <footer class="page-footer" style="background-color: #041138;">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Get the Android application</h5>
+                    <p class="grey-text text-lighten-4">by pressing <a href="https://bit.ly/2ReNrCl"
+                            target="_blank">here</a>.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 developed by ludev
+                <div class="right" style="display:inline; white-space:nowrap;">
+                    <img src="{% static 'github.png' %}" style="width: 15px;">
+                    <a class="grey-text text-lighten-4" href="https://github.com/juampiludu/Astronomer-web"
+                        target="_blank">   GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="{% static 'js/function.js' %}"></script>
     <script src="{% static 'js/particles.js' %}"></script>

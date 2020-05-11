@@ -2,7 +2,16 @@ $(document).ready(function () {
 
     $('.sidenav').sidenav();
     $('input#input_text').characterCounter();
+    $('.modal').modal();
     M.updateTextFields();
+
+    /*$('#planet-div').mouseover(function () {
+        $('#info_button').addClass('btn-floating btn-large waves-effect waves-light red');
+    });
+
+    $('#planet-div').mouseout(function () {
+        $('#info_button').removeClass('btn-floating btn-large waves-effect waves-light red');
+    });*/
 
 });
 

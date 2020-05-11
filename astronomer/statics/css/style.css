@@ -1,3 +1,13 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 /* nav */
 
 .nav-wrapper {
@@ -39,6 +49,7 @@ nav ul li.active a.nav-text {
 .input-field {
     color: white;
     min-width: 200px;
+    margin-left: -50px;
 }
 
 /* label focus color */
@@ -110,7 +121,7 @@ nav ul li.active a.nav-text {
     border-radius: 30px;
     width: 220px;
     min-width: 120px;
-    margin-left: 17%;
+    margin-left: -15%;
 }
 
 /* planets */
@@ -122,53 +133,135 @@ nav ul li.active a.nav-text {
 #planet-div {
     float: left;
     clear: both;
-    margin-left: 45%;
+    width: 200px;
+    margin-left: 43%;
     margin-top: 80px;
     margin-bottom: 80px;
+    position: relative;
+    text-align: center;
 }
 
 #mercury {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #venus {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #earth {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #moon {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #mars {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #jupiter {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #saturn {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #uranus {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #neptune {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 #pluto {
     width: 130px;
+    transition: margin-left 1s, transform 1s;
 }
 
 p {
     color: white;
+}
+
+#planet-div:hover #mercury {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #venus {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #earth {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #moon {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #mars {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #jupiter {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #saturn {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #neptune {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #uranus {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#planet-div:hover #pluto {
+    margin-left: -250px;
+    transform: rotate(180deg);
+}
+
+#info_button {
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    align-content: center;
+    text-align: center;
+    background-color: #041138;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s;
+}
+
+#planet-div:hover #info_button {
+    width: 60px;
+    height: 60px;
+    transition-delay: 0.2s;
 }
 
 /* devices */
@@ -187,7 +280,8 @@ p {
     #planet-div {
         float: left;
         clear: both;
-        margin-left: 35%;
+        width: 200px;
+        margin-left: 26%;
     }
 }
 
@@ -206,7 +300,8 @@ p {
     #planet-div {
         float: left;
         clear: both;
-        margin-left: 35%;
+        width: 200px;
+        margin-left: 26%;
     }
 }
 
@@ -225,7 +320,8 @@ p {
     #planet-div {
         float: left;
         clear: both;
-        margin-left: 35%;
+        width: 200px;
+        margin-left: 26%;
     }
 }
 
@@ -244,7 +340,8 @@ p {
     #planet-div {
         float: left;
         clear: both;
-        margin-left: 35%;
+        width: 200px;
+        margin-left: 26%;
     }
 }
 
@@ -263,7 +360,8 @@ p {
     #planet-div {
         float: left;
         clear: both;
-        margin-left: 35%;
+        width: 200px;
+        margin-left: 26%;
     }
 }
 
@@ -282,7 +380,8 @@ p {
     #planet-div {
         float: left;
         clear: both;
-        margin-left: 35%;
+        width: 200px;
+        margin-left: 26%;
     }
 }
 
@@ -301,6 +400,7 @@ p {
     #planet-div {
         float: left;
         clear: both;
-        margin-left: 35%;
+        width: 200px;
+        margin-left: 26%;
     }
 }
