@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 body {
     display: flex;
     min-height: 100vh;
@@ -11,6 +13,19 @@ main {
 #coll-header {
     background-color: #041138;
     color: white;
+}
+
+.section {
+    background-color: #FAFAFA;
+}
+
+p, a, button, div, ul, li, input, span {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Asap', sans-serif;
 }
 
 /* nav */
@@ -59,8 +74,12 @@ nav ul li.active a.nav-text {
 
 /* label focus color */
 
-.input-field input:focus+label {
+.input-field input:focus+label, .input-field textarea:focus+label {
     color: white !important;
+}
+
+.input-field input::placeholder, .input-field textarea::placeholder {
+    color: gray !important;
 }
 
 .input-field input[type].invalid, .input-field input[type].invalid:focus {
@@ -72,11 +91,39 @@ nav ul li.active a.nav-text {
     color: red !important;
 }
 
+.input-field input[type=text], .input-field input[type=email], .input-field textarea[type=text] {
+    color: white !important;
+}
+
 /* label underline focus color */
 
-.row .input-field input:focus {
+.row .input-field input:focus, .input-field textarea:focus {
     border-bottom: 1px solid white !important;
     box-shadow: 0 1px 0 0 white !important
+}
+
+/* about.html */
+
+#body-about {
+    background-color: black;
+}
+
+#div-about {
+    margin-top: 30px;
+}
+
+#div2-about {
+    margin-top: 40px;
+    max-width: 300px;
+}
+
+#div3-about {
+    margin-top: 80px;
+    max-width: 600px;
+}
+
+#action {
+    background-color: seagreen;
 }
 
 /* scroll */

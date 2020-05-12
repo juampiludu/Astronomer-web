@@ -7,7 +7,7 @@
 <body>
 
     <!-- Solar section -->
-    <div class="section white">
+    <div class="section">
         <div class="row container">
             <h2 class="header">Solar Eclipses in 2020</h2>
             <p class="grey-text text-darken-3 lighten-3">A solar eclipse occurs when a portion of the Earth is engulfed
@@ -16,14 +16,14 @@
         </div>
     </div>
     <div class="parallax-container">
-        <div class="parallax"><img src="{% static 'solar.jpg' %}"></div>
+        <div class="parallax"><img src="{% static 'images/solar.jpg' %}"></div>
     </div>
-    <div class="section white">
+    <div class="section">
         <div class="row container">
             <ul class="collapsible popout">
                 <li>
                     <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'sun.png' %}">
+                        <img style="width: 24px; margin-right: 10px;" src="{% static 'images/sun.png' %}">
                         21 June (Annular)
                     </div>
                     <div class="collapsible-body">
@@ -33,11 +33,15 @@
                         <br>
                         <b>Regions seeing, at least, a partial eclipse:</b> South/East Europe, Much of Asia, North in
                         Australia, Much of Africa, Pacific, Indian Ocean.
+                        <center>
+                            <img class="materialboxed" width="200"
+                                src="https://c.tadst.com/gfx/eclipses2/20200621/path-160.png">
+                        </center>
                     </div>
                 </li>
                 <li>
                     <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'sun.png' %}">
+                        <img style="width: 24px; margin-right: 10px;" src="{% static 'images/sun.png' %}">
                         14 December (Total)
                     </div>
                     <div class="collapsible-body">
@@ -45,18 +49,23 @@
                         Argentina in the afternoon. Some regions in southern South America, south-west Africa, and
                         Antarctica will see a partial solar eclipse, if the weather permits.
                         <br>
-                        <b>Regions seeing, at least, a partial eclipse:</b> South in Africa, Much of South America, Pacific,
+                        <b>Regions seeing, at least, a partial eclipse:</b> South in Africa, Much of South America,
+                        Pacific,
                         Atlantic, Indian Ocean, Antarctica.
+                        <center>
+                            <img class="materialboxed" width="200"
+                                src="https://c.tadst.com/gfx/eclipses2/20201214/path-160.png">
+                        </center>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
     <div class="parallax-container">
-        <div class="parallax"><img src="{% static 'solar2.jpg' %}"></div>
+        <div class="parallax"><img src="{% static 'images/solar2.jpg' %}"></div>
     </div>
     <!-- Lunar section -->
-    <div class="section white">
+    <div class="section">
         <div class="row container">
             <h2 class="header">Lunar Eclipses in 2020</h2>
             <p class="grey-text text-darken-3 lighten-3">A lunar eclipse occurs when the Moon moves into the Earth's
@@ -66,14 +75,14 @@
         </div>
     </div>
     <div class="parallax-container">
-        <div class="parallax"><img src="{% static 'lunar.jpg' %}"></div>
+        <div class="parallax"><img src="{% static 'images/lunar.jpg' %}"></div>
     </div>
-    <div class="section white">
+    <div class="section">
         <div class="row container">
             <ul class="collapsible popout">
                 <li>
                     <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'moon.png' %}">
+                        <img style="width: 24px; margin-right: 10px;" src="{% static 'images/moon.png' %}">
                         5-6 June (Penumbral)
                     </div>
                     <div class="collapsible-body">
@@ -81,26 +90,36 @@
                         during the maximum phase of this penumbral lunar eclipse, which is the second of four such
                         eclipses in 2020. Penumbral lunar eclipses are hard to distinguish from a normal Full Moon.
                         <br>
-                        <b>Regions seeing, at least, some parts of the eclipse:</b> Much of Europe, Much of Asia, Australia,
+                        <b>Regions seeing, at least, some parts of the eclipse:</b> Much of Europe, Much of Asia,
+                        Australia,
                         Africa, South/East South America, Pacific, Atlantic, Indian Ocean, Antarctica.
+                        <center>
+                            <img class="materialboxed" width="200"
+                                src="https://c.tadst.com/gfx/eclipses2/20200605/path-160.png">
+                        </center>
                     </div>
                 </li>
                 <li>
                     <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'moon.png' %}">
+                        <img style="width: 24px; margin-right: 10px;" src="{% static 'images/moon.png' %}">
                         4-5 July (Penumbral)
                     </div>
                     <div class="collapsible-body">
                         The Moon may turn slightly darker than a usual Full Moon for those in much of North and South
                         America, and Africa during the maximum phase of this penumbral lunar eclipse.
                         <br>
-                        <b>Regions seeing, at least, some parts of the eclipse:</b> South/West Europe, Much of Africa, Much of
+                        <b>Regions seeing, at least, some parts of the eclipse:</b> South/West Europe, Much of Africa,
+                        Much of
                         North America, South America, Pacific, Atlantic, Indian Ocean, Antarctica.
+                        <center>
+                            <img class="materialboxed" width="200"
+                                src="https://c.tadst.com/gfx/eclipses2/20200705/path-160.png">
+                        </center>
                     </div>
                 </li>
                 <li>
                     <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'moon.png' %}">
+                        <img style="width: 24px; margin-right: 10px;" src="{% static 'images/moon.png' %}">
                         29-30 November (Penumbral)
                     </div>
                     <div class="collapsible-body">
@@ -108,15 +127,20 @@
                         Australia, and parts of Asia might see a darker Full Moon during the maximum phase of this
                         eclipse.
                         <br>
-                        <b>Regions seeing, at least, some parts of the eclipse:</b> Much of Europe, Much of Asia, Australia,
+                        <b>Regions seeing, at least, some parts of the eclipse:</b> Much of Europe, Much of Asia,
+                        Australia,
                         North America, South America, Pacific, Atlantic, Arctic.
+                        <center>
+                            <img class="materialboxed" width="200"
+                                src="https://c.tadst.com/gfx/eclipses2/20201130/path-160.png">
+                        </center>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
     <div class="parallax-container">
-        <div class="parallax"><img src="{% static 'lunar2.jpg' %}"></div>
+        <div class="parallax"><img src="{% static 'images/lunar2.jpg' %}"></div>
     </div>
 
 </body>
