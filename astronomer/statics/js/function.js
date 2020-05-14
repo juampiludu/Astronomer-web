@@ -25,16 +25,30 @@ const uranus = 8.87;
 const neptune = 11.15;
 const pluto = 0.62;
 
-var btn = $("#weight_button")
-
 function operation() {
-    var weight = String(document.getElementById("input_text").value);
-    if (weight == '') {
-        btn.attr("disabled", "disabled");
-    } else {
 
-        btn.removeAttr("disabled");
-        var kg = document.getElementById("input_text").value;
+    var weight = document.getElementById("input_text").value;
+
+    if (String(weight).length == 0) {
+        
+        document.getElementById("input_text").style.borderColor = "red";
+        document.getElementById("label_text").style.color = "red";
+
+    }
+    else if (parseFloat(weight) != Math.abs(weight)) {
+
+        document.getElementById("input_text").style.borderColor = "red";
+        document.getElementById("label_text").style.color = "red";
+
+    }
+    else if (String(weight).length > 20) {
+
+    }
+    else {
+
+        document.getElementById("input_text").style.borderColor = "white";
+        document.getElementById("label_text").style.color = "gray";
+        var kg = weight;
         var op1 = (parseFloat(kg) * mercury) / earth;
         var op2 = (parseFloat(kg) * venus) / earth;
         var op3 = (parseFloat(kg) * moon) / earth;
@@ -55,22 +69,6 @@ function operation() {
         document.getElementById("text_pluto").innerText = op9.toFixed(2) + " kg";
         document.getElementById("text_earth").innerText = parseFloat(kg).toFixed(2) + " kg";
 
-    }
-
-}
-
-function disableButton() {
-
-    if (String(document.getElementById("input_text").value).length > 20) {
-        btn.attr("disabled", "disabled");
-    }
-
-}
-
-function enableButton() {
-
-    if (String(document.getElementById("input_text").value).length <= 20) {
-        btn.removeAttr("disabled");
     }
 
 }
