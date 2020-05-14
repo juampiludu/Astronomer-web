@@ -50,12 +50,6 @@ nav ul li.active a.nav-text {
     background-color: #01081f;
 }
 
-/* divs */
-
-.col {
-    margin-top: 20px;
-}
-
 /* materialize inputs */
 
 #arrow {
@@ -69,7 +63,6 @@ nav ul li.active a.nav-text {
 .input-field {
     color: white;
     min-width: 200px;
-    margin-left: -50px;
 }
 
 /* label focus color */
@@ -97,7 +90,7 @@ nav ul li.active a.nav-text {
 
 /* label underline focus color */
 
-.row .input-field input:focus, .input-field textarea:focus {
+.input-field input:focus, .input-field textarea:focus {
     border-bottom: 1px solid white !important;
     box-shadow: 0 1px 0 0 white !important
 }
@@ -166,6 +159,11 @@ nav ul li.active a.nav-text {
     background-repeat: no-repeat;
 }
 
+#first {
+    margin-top: 30px;
+    align-content: center;
+}
+
 /* btns */
 
 #weight_button {
@@ -173,74 +171,73 @@ nav ul li.active a.nav-text {
     border-radius: 30px;
     width: 220px;
     min-width: 120px;
-    margin-left: -15%;
+    margin-top: 30px;
 }
 
 /* planets */
 
-.center-align {
+#second {
     align-content: center;
+    max-width: 200px;
 }
 
 #planet-div {
     float: left;
     clear: both;
     width: 200px;
-    margin-left: 43%;
     margin-top: 80px;
     margin-bottom: 80px;
-    position: relative;
     text-align: center;
 }
 
 #mercury {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 90px;
+    transition: width 0.2s;
 }
 
 #venus {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 110px;
+    transition: width 0.2s;
 }
 
 #earth {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 115px;
+    transition: width 0.2s;
 }
 
 #moon {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 80px;
+    transition: width 0.2s;
 }
 
 #mars {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 100px;
+    transition: width 0.2s;
 }
 
 #jupiter {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 160px;
+    transition: width 0.2s;
 }
 
 #saturn {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 160px;
+    transition: width 0.2s;
 }
 
 #uranus {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 160px;
+    transition: width 0.2s;
 }
 
 #neptune {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 150px;
+    transition: width 0.2s;
 }
 
 #pluto {
-    width: 130px;
-    transition: margin-left 1s, transform 1s;
+    width: 80px;
+    transition: width 0.2s;
 }
 
 p {
@@ -248,211 +245,41 @@ p {
 }
 
 #planet-div:hover #mercury {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #venus {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #earth {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #moon {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #mars {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #jupiter {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #saturn {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #neptune {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #uranus {
-    margin-left: -250px;
-    transform: rotate(180deg);
+    width: 200px;
 }
 
 #planet-div:hover #pluto {
-    margin-left: -250px;
-    transform: rotate(180deg);
-}
-
-#info_button {
-    position: absolute;
-    top: 115px;
-    left: 50%;
-    align-content: center;
-    text-align: center;
-    background-color: #041138;
-    width: 0px;
-    height: 0px;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s;
-}
-
-#planet-div:hover #info_button {
-    width: 60px;
-    height: 60px;
-    transition-delay: 0.2s;
-}
-
-/* devices */
-
-@media all and (min-width:960px) and (max-width: 1024px) {
-    #weight_button {
-        background-color: #041138;
-        border-radius: 30px;
-        width: 220px;
-        min-width: 120px;
-        margin-left: -50px;
-    }
-    .input-field {
-        margin-left: -35px;
-    }
-    #planet-div {
-        float: left;
-        clear: both;
-        width: 200px;
-        margin-left: 26%;
-    }
-}
-
-@media all and (min-width:801px) and (max-width: 959px) {
-    /* put your css styles in here */
-    #weight_button {
-        background-color: #041138;
-        border-radius: 30px;
-        width: 220px;
-        min-width: 120px;
-        margin-left: 20px;
-    }
-    .input-field {
-        margin-left: -15px;
-    }
-    #planet-div {
-        float: left;
-        clear: both;
-        width: 200px;
-        margin-left: 26%;
-    }
-}
-
-@media all and (min-width:769px) and (max-width: 800px) {
-    /* put your css styles in here */
-    #weight_button {
-        background-color: #041138;
-        border-radius: 30px;
-        width: 220px;
-        min-width: 120px;
-        margin-left: -50px;
-    }
-    .input-field {
-        margin-left: -35px;
-    }
-    #planet-div {
-        float: left;
-        clear: both;
-        width: 200px;
-        margin-left: 26%;
-    }
-}
-
-@media all and (min-width:569px) and (max-width: 768px) {
-    /* put your css styles in here */
-    #weight_button {
-        background-color: #041138;
-        border-radius: 30px;
-        width: 220px;
-        min-width: 120px;
-        margin-left: -20px;
-    }
-    .input-field {
-        margin-left: -25px;
-    }
-    #planet-div {
-        float: left;
-        clear: both;
-        width: 200px;
-        margin-left: 26%;
-    }
-}
-
-@media all and (min-width:481px) and (max-width: 568px) {
-    /* put your css styles in here */
-    #weight_button {
-        background-color: #041138;
-        border-radius: 30px;
-        width: 220px;
-        min-width: 120px;
-        margin-left: -50px;
-    }
-    .input-field {
-        margin-left: -35px;
-    }
-    #planet-div {
-        float: left;
-        clear: both;
-        width: 200px;
-        margin-left: 26%;
-    }
-}
-
-@media all and (min-width:321px) and (max-width: 480px) {
-    /* put your css styles in here */
-    #weight_button {
-        background-color: #041138;
-        border-radius: 30px;
-        width: 220px;
-        min-width: 120px;
-        margin-left: -50px;
-    }
-    .input-field {
-        margin-left: -35px;
-    }
-    #planet-div {
-        float: left;
-        clear: both;
-        width: 200px;
-        margin-left: 26%;
-    }
-}
-
-@media all and (min-width:0px) and (max-width: 320px) {
-    /* put your css styles in here */
-    #weight_button {
-        background-color: #041138;
-        border-radius: 30px;
-        width: 220px;
-        min-width: 120px;
-        margin-left: -50px;
-    }
-    .input-field {
-        margin-left: -35px;
-    }
-    #planet-div {
-        float: left;
-        clear: both;
-        width: 200px;
-        margin-left: 26%;
-    }
+    width: 200px;
 }

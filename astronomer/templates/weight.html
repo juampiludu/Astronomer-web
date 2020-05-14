@@ -7,99 +7,89 @@
 <body style="background-color: black;">
 
     <div id="particles-js"></div>
-    <div class="row">
-        <div class="col s6 offset-s3">
-            <div class="input-field">
-                <i id="arrow" class="material-icons prefix">arrow_forward</i>
-                <input id="input_text" type="number" autocomplete="off" data-length="20" step="any" min="0">
-                <label for="input_text" type="text">Enter your weight in kg:</label>
-                <span style="color: white;" class="helper-text invalid"
-                    data-error="The number cannot be longer than 20 digits."></span>
+    <center>
+        <div id="first">
+            <div style="max-width: 300px; align-content: center;">
+                <div class="input-field">
+                    <i id="arrow" class="material-icons prefix">arrow_forward</i>
+                    <input id="input_text" type="number" autocomplete="off" data-length="20" step="any" min="0"
+                        data-required="true">
+                    <label for="input_text" type="text">Enter your weight in kg:</label>
+                    <span style="color: white;" class="helper-text invalid"
+                        data-error="The number cannot be longer than 20 digits."></span>
+                </div>
+            </div>
+            <div>
+                <div onmouseover="enableButton();" style="max-width: 220px;">
+                    <button id="weight_button" class="btn-large waves-effect waves-light" type="button"
+                        onclick="operation();" onmouseover="disableButton();">CALCULATE!</button>
+                </div>
             </div>
         </div>
-        <div class="col s6 offset-s4">
-            <div onmouseover="enableButton();">
-                <button id="weight_button" class="btn-large waves-effect waves-light" type="button"
-                    onclick="operation();" onmouseover="disableButton();">CALCULATE!</button>
+        <!--class="modal-trigger"-->
+        <div id="second">
+            <div id="planet-div">
+                <h5 style="color: white;">Mercury</h5>
+                <a href="#modal-mercury" class="modal-trigger"><img id="mercury"
+                        src="{% static 'images/mercury.png' %}"></a>
+                <p id="text_mercury"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Venus</h5>
+                <a href="#modal-venus" class="modal-trigger"><img id="venus" src="{% static 'images/venus.png' %}"></a>
+                <p id="text_venus"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Earth</h5>
+                <a href="#modal-earth" class="modal-trigger"><img id="earth" src="{% static 'images/earth.png' %}"></a>
+                <p id="text_earth"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Moon</h5>
+                <a href="#modal-moon" class="modal-trigger"><img id="moon" src="{% static 'images/moon.png' %}"></a>
+                <p id="text_moon"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Mars</h5>
+                <a href="#modal-mars" class="modal-trigger"><img id="mars" src="{% static 'images/mars.png' %}"></a>
+                <p id="text_mars"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Jupiter</h5>
+                <a href="#modal-jupiter" class="modal-trigger"><img id="jupiter"
+                        src="{% static 'images/jupiter.png' %}"></a>
+                <p id="text_jupiter"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Saturn</h5>
+                <a href="#modal-saturn" class="modal-trigger"><img id="saturn"
+                        src="{% static 'images/saturn.png' %}"></a>
+                <p id="text_saturn"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Uranus</h5>
+                <a href="#modal-uranus" class="modal-trigger"><img id="uranus"
+                        src="{% static 'images/uranus.png' %}"></a>
+                <p id="text_uranus"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Neptune</h5>
+                <a href="#modal-neptune" class="modal-trigger"><img id="neptune"
+                        src="{% static 'images/neptune.png' %}"></a>
+                <p id="text_neptune"></p>
+            </div>
+            <div id="planet-div">
+                <h5 style="color: white;">Pluto</h5>
+                <a href="#modal-pluto" class="modal-trigger"><img id="pluto" src="{% static 'images/pluto.png' %}"></a>
+                <p id="text_pluto"></p>
             </div>
         </div>
-    </div>
-    <div class="center-align">
-        <div id="planet-div">
-            <h5 style="color: white;">Mercury</h5>
-            <img id="mercury" src="{% static 'images/mercury.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-mercury"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_mercury"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Venus</h5>
-            <img id="venus" src="{% static 'images/venus.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-venus"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_venus"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Earth</h5>
-            <img id="earth" src="{% static 'images/earth.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-earth"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_earth"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Moon</h5>
-            <img id="moon" src="{% static 'images/moon.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-moon"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_moon"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Mars</h5>
-            <img id="mars" src="{% static 'images/mars.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-mars"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_mars"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Jupiter</h5>
-            <img id="jupiter" src="{% static 'images/jupiter.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-jupiter"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_jupiter"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Saturn</h5>
-            <img id="saturn" src="{% static 'images/saturn.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-saturn"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_saturn"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Uranus</h5>
-            <img id="uranus" src="{% static 'images/uranus.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-uranus"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_uranus"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Neptune</h5>
-            <img id="neptune" src="{% static 'images/neptune.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-neptune"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_neptune"></p>
-        </div>
-        <div id="planet-div">
-            <h5 style="color: white;">Pluto</h5>
-            <img id="pluto" src="{% static 'images/pluto.png' %}">
-            <a id="info_button" class="btn-floating btn-large waves-effect waves-light modal-trigger"
-                href="#modal-pluto"><i class="material-icons" style="margin-top: 5%;">info</i></a>
-            <p id="text_pluto"></p>
-        </div>
-    </div>
+
+    </center>
 
     <!-- Modals -->
 
-    <div id="modal-mercury" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-mercury" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Mercury</h4>
             <img
@@ -119,7 +109,7 @@
         </div>
     </div>
 
-    <div id="modal-pluto" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-pluto" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Pluto</h4>
             <img
@@ -139,7 +129,7 @@
         </div>
     </div>
 
-    <div id="modal-venus" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-venus" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Venus</h4>
             <img
@@ -159,7 +149,7 @@
         </div>
     </div>
 
-    <div id="modal-earth" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-earth" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Earth</h4>
             <img
@@ -183,7 +173,7 @@
         </div>
     </div>
 
-    <div id="modal-moon" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-moon" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Moon</h4>
             <img
@@ -206,7 +196,7 @@
         </div>
     </div>
 
-    <div id="modal-mars" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-mars" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Mars</h4>
             <img
@@ -225,7 +215,7 @@
         </div>
     </div>
 
-    <div id="modal-jupiter" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-jupiter" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Jupiter</h4>
             <img
@@ -252,7 +242,7 @@
         </div>
     </div>
 
-    <div id="modal-saturn" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-saturn" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Saturn</h4>
             <img
@@ -274,7 +264,7 @@
         </div>
     </div>
 
-    <div id="modal-uranus" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-uranus" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Uranus</h4>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/220px-Uranus2.jpg">
@@ -296,7 +286,7 @@
         </div>
     </div>
 
-    <div id="modal-neptune" class="modal center-align" style="background-color: #041138;">
+    <div id="modal-neptune" class="modal modal-fixed-footer center-align" style="background-color: #041138;">
         <div class="modal-content">
             <h4 style="color: white;">Neptune</h4>
             <img
