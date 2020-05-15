@@ -102,17 +102,17 @@ nav ul li.active a.nav-text {
 }
 
 #div-about {
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 #div2-about {
-    margin-top: 40px;
+    margin-top: 60px;
     max-width: 300px;
 }
 
 #div3-about {
     margin-top: 80px;
-    max-width: 600px;
+    max-width: 500px;
 }
 
 #action {

@@ -9,8 +9,8 @@
     <meta name="theme-color" content="#041138">
     <title>Astronomer</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'images/ic_launcher_foreground.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'admin/images/ic_launcher_foreground.png' %}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
@@ -18,16 +18,17 @@
 <nav>
     <div class="nav-wrapper">
         <a href="/my-weight" class="brand-logo show-on-medium-and-up" style="margin-left: 2%;"><i><img
-                    class="right hide-on-med-and-down" src="{% static 'images/ic_launcher_foreground.png' %}"
+                    class="right hide-on-med-and-down" src="{% static 'admin/images/ic_launcher_foreground.png' %}"
                     width="65px"></i>Astronomer</a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><img src="{% static 'admin/images/menu.png' %}"
+                width="24px" style="margin-top: 15px;"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
-                            src="{% static 'images/escala.png' %}" width="24px"></i>My Weight</a></li>
+                            src="{% static 'admin/images/escala.png' %}" width="24px"></i>My Weight</a></li>
             <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
-                            src="{% static 'images/rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
+                            src="{% static 'admin/images/rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
             <li><a class='nav-text' href="/about"><i class="material-icons left"><img
-                            src="{% static 'images/signs.png' %}" width="24px"></i>About</a></li>
+                            src="{% static 'admin/images/signs.png' %}" width="24px"></i>About</a></li>
         </ul>
     </div>
 </nav>
@@ -36,20 +37,20 @@
     <li>
         <div class="user-view">
             <div class="background">
-                <img src="{% static 'images/header-image.png' %}" width="300px" height="200px">
+                <img src="{% static 'admin/images/header-image.png' %}" width="300px" height="200px">
             </div>
-            <a href="#"><img class="circle" src="{% static 'images/ic_launcher_foreground5.png' %}"
-                    alt="Astronomer" style="width: 100px; height: 100px;"></a>
+            <a href="#"><img class="circle" src="{% static 'admin/images/ic_launcher_foreground5.png' %}" alt="Astronomer"
+                    style="width: 100px; height: 100px;"></a>
             <a href="#"><span class="white-text name"><b>Astronomer</b></span></a>
             <a href="#"><span class="white-text email">My weight in other planets!</span></a>
         </div>
     </li>
-    <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img src="{% static 'images/escala.png' %}"
+    <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img src="{% static 'admin/images/escala.png' %}"
                     width="24px"></i>My Weight</a></li>
     <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
-                    src="{% static 'images/rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
+                    src="{% static 'admin/images/rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
     <li><a class='nav-text' href="/about"><i id="info-sidenav" class="material-icons left"><img
-                    src="{% static 'images/signs.png' %}" width="24px"></i>About</a></li>
+                    src="{% static 'admin/images/signs.png' %}" width="24px"></i>About</a></li>
 </ul>
 
 {% block content %}
@@ -68,7 +69,7 @@
         <div class="container">
             © 2020 developed by ludev
             <div class="right">
-                <img src="{% static 'images/github.png' %}" style="width: 15px;">
+                <img src="{% static 'admin/images/github.png' %}" style="width: 15px;">
                 <a class="grey-text text-lighten-4" href="https://github.com/juampiludu/Astronomer-web" target="_blank">
                     GitHub</a>
             </div>
@@ -76,9 +77,9 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="{% static 'js/function.js' %}"></script>
-<script src="{% static 'js/particles.js' %}"></script>
-<script src="{% static 'js/app.js' %}"></script>
+<script type="text/javascript" src="{% static 'admin/js/function.js' %}"></script>
+<script src="{% static 'admin/js/particles.js' %}"></script>
+<script src="{% static 'admin/js/app.js' %}"></script>
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
