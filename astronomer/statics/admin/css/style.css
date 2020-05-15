@@ -98,7 +98,7 @@ nav ul li.active a.nav-text {
 /* about.html */
 
 #body-about {
-    background-color: black;
+    background-image: url("../images/black-noise.jpg");
 }
 
 #div-about {
@@ -106,13 +106,18 @@ nav ul li.active a.nav-text {
 }
 
 #div2-about {
+    background-color: #121212;
     margin-top: 60px;
-    max-width: 300px;
+    max-width: 400px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 12px 10px -5px rgba(8, 8, 8, 0.75);
+    -moz-box-shadow: 0px 12px 10px -5px rgba(8, 8, 8, 0.75);
+    box-shadow: 0px 12px 10px -5px rgba(8, 8, 8, 0.75);
 }
 
 #div3-about {
-    margin-top: 80px;
-    max-width: 500px;
+    max-width: 300px;
 }
 
 #action {
@@ -282,4 +287,16 @@ p {
 
 #planet-div:hover #pluto {
     width: 200px;
+}
+
+#info_div {
+    background-color: #121212;
+    color: white;
+    min-width: 400px;
+    max-width: 800px;
+    margin-top: 30px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 12px 10px -5px rgba(45, 45, 45, 0.75);
+    -moz-box-shadow: 0px 12px 10px -5px rgba(45, 45, 45, 0.75);
+    box-shadow: 0px 12px 10px -5px rgba(45, 45, 45, 0.75);
 }

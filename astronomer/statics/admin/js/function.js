@@ -25,12 +25,18 @@ const uranus = 8.87;
 const neptune = 11.15;
 const pluto = 0.62;
 
+$(document).on('keypress', function (e) {
+    if (e.which == 13) {
+        operation()
+    }
+});
+
 function operation() {
 
     var weight = document.getElementById("input_text").value;
 
     if (String(weight).length == 0) {
-        
+
         document.getElementById("input_text").style.borderColor = "red";
         document.getElementById("label_text").style.color = "red";
 
