@@ -98,7 +98,8 @@ nav ul li.active a.nav-text {
 /* about.html */
 
 #body-about {
-    background-image: url("../images/black-noise.jpg");
+    background-color: black;
+    background-image: linear-gradient(black,rgb(75, 75, 75));
 }
 
 #div-about {
@@ -111,9 +112,7 @@ nav ul li.active a.nav-text {
     max-width: 400px;
     margin-bottom: 30px;
     border-radius: 8px;
-    -webkit-box-shadow: 0px 12px 10px -5px rgba(8, 8, 8, 0.75);
-    -moz-box-shadow: 0px 12px 10px -5px rgba(8, 8, 8, 0.75);
-    box-shadow: 0px 12px 10px -5px rgba(8, 8, 8, 0.75);
+    box-shadow: 0 2px 2px #1b1b1b ;
 }
 
 #div3-about {
@@ -296,9 +295,7 @@ p {
     max-width: 800px;
     margin-top: 30px;
     border-radius: 8px;
-    -webkit-box-shadow: 0px 12px 10px -5px rgba(45, 45, 45, 0.75);
-    -moz-box-shadow: 0px 12px 10px -5px rgba(45, 45, 45, 0.75);
-    box-shadow: 0px 12px 10px -5px rgba(45, 45, 45, 0.75);
+    box-shadow: 0 2px 2px #242424 ;
 }
 
 /* Countdown */

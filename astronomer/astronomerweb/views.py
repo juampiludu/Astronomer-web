@@ -6,10 +6,13 @@ def principal(request):
     return redirect('/my-weight')
 
 def weight(request):
-    return render(request, 'weight.html')
+    sitename = 'My Weight'
+    return render(request, 'weight.html', {'sitename' : sitename})
 
 def nextEclipses(request):
-    return render(request, 'next_eclipses.html')
+    sitename = 'Next Eclipses'
+    return render(request, 'next_eclipses.html', {'sitename' : sitename})
 
 def about(request):
-    return render(request, 'about.html')
+    sitename = 'About'
+    return render(request, 'about.html', {'sitename' : sitename})
