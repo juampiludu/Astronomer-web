@@ -9,6 +9,7 @@ $(document).ready(function () {
     M.textareaAutoResize($('#emailbody'));
     $(".mdl-spinner").fadeOut("fast");
     $(".success-help").fadeOut("fast");
+    $('.fixed-action-btn').floatingActionButton();
     /*$('.tooltipped').tooltip();*/
     M.updateTextFields();
 
@@ -116,4 +117,35 @@ $(function () {
             type: "POST"
         });
     });
+});
+
+
+/* navbar hide */
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-65px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+/* up button */
+
+var btnUp = $('#up-button');
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        btnUp.addClass('show');
+    } else {
+        btnUp.removeClass('show');
+    }
+});
+
+btnUp.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
 });

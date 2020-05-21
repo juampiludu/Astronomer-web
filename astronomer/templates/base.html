@@ -16,12 +16,12 @@
 </head>
 
 <nav>
-    <div class="nav-wrapper">
-        <a href="/my-weight" class="brand-logo show-on-medium-and-up" style="margin-left: 2%;"><i><img
+    <div class="nav-wrapper" id="navbar">
+        <a href="/my-weight" class="brand-logo show-on-medium-and-up" style="margin-left: 2%; background-color: #041138 !important;"><i><img
                     class="right hide-on-med-and-down" src="{% static 'admin/images/ic_launcher_foreground.png' %}"
                     width="65px"></i>Astronomer</a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><img src="{% static 'admin/images/menu.png' %}"
-                width="24px" style="margin-top: 15px;"></a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger" style="background-color: #041138 !important;"><img src="{% static 'admin/images/menu.png' %}"
+                width="24px" style="padding-top: 80%;"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
                             src="{% static 'admin/images/escala.png' %}" width="24px"></i>My Weight</a></li>
@@ -52,6 +52,14 @@
     <li><a class='nav-text' href="/about"><i id="info-sidenav" class="material-icons left"><img
                     src="{% static 'admin/images/signs.png' %}" width="24px"></i>About</a></li>
 </ul>
+
+<!-- up button -->
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" style="background-color: orangered;" id="up-button">
+        <i class="material-icons left"><img src="{% static 'admin/images/up-arrow.png' %}"
+            style="padding-top: 17%;"></i>
+    </a>
+</div>
 
 {% block content %}
 {% endblock %}

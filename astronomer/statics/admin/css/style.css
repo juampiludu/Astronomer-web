@@ -30,8 +30,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* nav */
 
-.nav-wrapper {
-    background-color: #041138 !important;
+#navbar {
+    background-color: #041138;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s;
+    height: 64px;
+    z-index: 9998;
+  
+}
+
+.nav-wrapper a:hover {
+    background-color: black;
 }
 
 /* sidenav */
@@ -311,4 +322,17 @@ p {
 #li-countdown span {
     display: block;
     font-size: 20px;
+}
+
+/* up-button */
+
+#up-button {
+    visibility: hidden;
+    opacity: 0;
+    transition: background-color .3s, opacity .5s, visibility .5s;
+}
+
+#up-button.show {
+    visibility: visible;
+    opacity: 1;
 }
