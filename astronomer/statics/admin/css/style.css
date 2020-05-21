@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* nav */
 
+nav {
+    background-color: #041138 !important;
+}
+
 #navbar {
     background-color: #041138;
     position: fixed;
@@ -160,23 +164,12 @@ nav ul li.active a.nav-text {
     background: #555;
 }
 
-/* ---- particles.js container ---- */
+/* ---- weight body ---- */
 
-#particles-js {
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    position: fixed;
-    background-color: black;
-    background-image: url('');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-
-#first {
-    margin-top: 30px;
-    align-content: center;
+#weight-body {
+    background-image: url("../images/black-back.jpg");
+    background-size: 640px 640px;
+    border-image-repeat: repeat;
 }
 
 /* btns */
@@ -302,6 +295,7 @@ p {
 #info_div {
     background-color: #121212;
     color: white;
+    margin: 10px;
     min-width: 400px;
     max-width: 800px;
     margin-top: 30px;
