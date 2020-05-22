@@ -322,8 +322,13 @@ p {
 
 #up-button {
     visibility: hidden;
+    background-color: orangered;
     opacity: 0;
     transition: background-color .3s, opacity .5s, visibility .5s;
+}
+
+#up-button:hover {
+    background-color: #121212;
 }
 
 #up-button.show {
