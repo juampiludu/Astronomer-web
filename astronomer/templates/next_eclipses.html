@@ -21,63 +21,34 @@
     <div class="section">
         <div class="row container">
             <ul class="collapsible popout">
+                {% for eclipse in solarEclipse %}
                 <li>
                     <div class="collapsible-header" id="coll-header">
                         <img style="width: 24px; margin-right: 10px;" src="{% static 'admin/images/sun.png' %}">
-                        21 June (Annular)
+                        {{eclipse.date_type}}
                     </div>
                     <div class="collapsible-body">
-                        The annular phase of this solar eclipse is visible from parts of Africa including the Central
-                        African Republic, Congo, and Ethiopia; south of Pakistan and northern India; and China. Weather
-                        permitting, people in these areas will see the characteristic ring of fire.
+                        {{eclipse.eclipse_info}}
                         <br>
-                        <b>Regions seeing, at least, a partial eclipse:</b> South/East Europe, Much of Asia, North in
-                        Australia, Much of Africa, Pacific, Indian Ocean.
+                        <b>Regions seeing, at least, a partial eclipse:</b> {{eclipse.short_eclipse_info}}
                         <center>
                             <img class="materialboxed" width="200"
-                                src="https://c.tadst.com/gfx/eclipses2/20200621/path-160.png">
+                                src="{{eclipse.eclipse_image_route}}">
                             <div class="container">
                                 <h5>Days left:</h5>
-                                <ul id="ul-countdown">
-                                    <li id="li-countdown"><span id="soljundays"></span>days</li>
-                                    <li id="li-countdown"><span id="soljunhours"></span>Hours</li>
-                                    <li id="li-countdown"><span id="soljunminutes"></span>Minutes</li>
-                                    <li id="li-countdown"><span id="soljunseconds"></span>Seconds</li>
+                                <ul id="solar{{eclipse.id}}ul-countdown">
+                                    <li id="li-countdown"><span id="solar{{eclipse.id}}days"></span>days</li>
+                                    <li id="li-countdown"><span id="solar{{eclipse.id}}hours"></span>Hours</li>
+                                    <li id="li-countdown"><span id="solar{{eclipse.id}}minutes"></span>Minutes</li>
+                                    <li id="li-countdown"><span id="solar{{eclipse.id}}seconds"></span>Seconds</li>
                                 </ul>
-                                <p id="timedone" style="color: black;"></p>
+                                <p id="solar{{eclipse.id}}timedone" style="color: black;"></p>
+                                <p style="visibility: hidden;" id="solar{{eclipse.id}}date">{{eclipse.date}}</p>
                             </div>
                         </center>
                     </div>
                 </li>
-                <li>
-                    <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'admin/images/sun.png' %}">
-                        14 December (Total)
-                    </div>
-                    <div class="collapsible-body">
-                        This total solar eclipse, the last eclipse of 2020, is visible from Chile and some parts of
-                        Argentina in the afternoon. Some regions in southern South America, south-west Africa, and
-                        Antarctica will see a partial solar eclipse, if the weather permits.
-                        <br>
-                        <b>Regions seeing, at least, a partial eclipse:</b> South in Africa, Much of South America,
-                        Pacific,
-                        Atlantic, Indian Ocean, Antarctica.
-                        <center>
-                            <img class="materialboxed" width="200"
-                                src="https://c.tadst.com/gfx/eclipses2/20201214/path-160.png">
-                            <div class="container">
-                                <h5>Days left:</h5>
-                                <ul id="ul-countdown">
-                                    <li id="li-countdown"><span id="decdays"></span>days</li>
-                                    <li id="li-countdown"><span id="dechours"></span>Hours</li>
-                                    <li id="li-countdown"><span id="decminutes"></span>Minutes</li>
-                                    <li id="li-countdown"><span id="decseconds"></span>Seconds</li>
-                                </ul>
-                                <p id="timedone" style="color: black;"></p>
-                            </div>
-                        </center>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>
@@ -100,92 +71,34 @@
     <div class="section">
         <div class="row container">
             <ul class="collapsible popout">
+                {% for eclipse in lunarEclipse %}
                 <li>
                     <div class="collapsible-header" id="coll-header">
                         <img style="width: 24px; margin-right: 10px;" src="{% static 'admin/images/moon.png' %}">
-                        5-6 June (Penumbral)
+                        {{eclipse.date_type}}
                     </div>
                     <div class="collapsible-body">
-                        If you are in Asia, Australia, Europe, and Africa, you might see the Moon turn a shade darker
-                        during the maximum phase of this penumbral lunar eclipse, which is the second of four such
-                        eclipses in 2020. Penumbral lunar eclipses are hard to distinguish from a normal Full Moon.
+                        {{eclipse.eclipse_info}}
                         <br>
-                        <b>Regions seeing, at least, some parts of the eclipse:</b> Much of Europe, Much of Asia,
-                        Australia,
-                        Africa, South/East South America, Pacific, Atlantic, Indian Ocean, Antarctica.
+                        <b>Regions seeing, at least, some parts of the eclipse:</b> {{eclipse.short_eclipse_info}}
                         <center>
                             <img class="materialboxed" width="200"
-                                src="https://c.tadst.com/gfx/eclipses2/20200605/path-160.png">
+                                src="{{eclipse.eclipse_image_route}}">
                             <div class="container">
                                 <h5>Days left:</h5>
-                                <ul id="ul-countdown">
-                                    <li id="li-countdown"><span id="lunjundays"></span>days</li>
-                                    <li id="li-countdown"><span id="lunjunhours"></span>Hours</li>
-                                    <li id="li-countdown"><span id="lunjunminutes"></span>Minutes</li>
-                                    <li id="li-countdown"><span id="lunjunseconds"></span>Seconds</li>
+                                <ul id="lunar{{eclipse.id}}ul-countdown">
+                                    <li id="li-countdown"><span id="lunar{{eclipse.id}}days"></span>days</li>
+                                    <li id="li-countdown"><span id="lunar{{eclipse.id}}hours"></span>Hours</li>
+                                    <li id="li-countdown"><span id="lunar{{eclipse.id}}minutes"></span>Minutes</li>
+                                    <li id="li-countdown"><span id="lunar{{eclipse.id}}seconds"></span>Seconds</li>
                                 </ul>
-                                <p id="timedone" style="color: black;"></p>
+                                <p id="lunar{{eclipse.id}}timedone" style="color: black;"></p>
+                                <p style="visibility: hidden;" id="lunar{{eclipse.id}}date">{{eclipse.date}}</p>
                             </div>
                         </center>
                     </div>
                 </li>
-                <li>
-                    <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'admin/images/moon.png' %}">
-                        4-5 July (Penumbral)
-                    </div>
-                    <div class="collapsible-body">
-                        The Moon may turn slightly darker than a usual Full Moon for those in much of North and South
-                        America, and Africa during the maximum phase of this penumbral lunar eclipse.
-                        <br>
-                        <b>Regions seeing, at least, some parts of the eclipse:</b> South/West Europe, Much of Africa,
-                        Much of
-                        North America, South America, Pacific, Atlantic, Indian Ocean, Antarctica.
-                        <center>
-                            <img class="materialboxed" width="200"
-                                src="https://c.tadst.com/gfx/eclipses2/20200705/path-160.png">
-                            <div class="container">
-                                <h5>Days left:</h5>
-                                <ul id="ul-countdown">
-                                    <li id="li-countdown"><span id="juldays"></span>days</li>
-                                    <li id="li-countdown"><span id="julhours"></span>Hours</li>
-                                    <li id="li-countdown"><span id="julminutes"></span>Minutes</li>
-                                    <li id="li-countdown"><span id="julseconds"></span>Seconds</li>
-                                </ul>
-                                <p id="timedone" style="color: black;"></p>
-                            </div>
-                        </center>
-                    </div>
-                </li>
-                <li>
-                    <div class="collapsible-header" id="coll-header">
-                        <img style="width: 24px; margin-right: 10px;" src="{% static 'admin/images/moon.png' %}">
-                        29-30 November (Penumbral)
-                    </div>
-                    <div class="collapsible-body">
-                        This is the last penumbral lunar eclipse of 2020. Residents of North and South America,
-                        Australia, and parts of Asia might see a darker Full Moon during the maximum phase of this
-                        eclipse.
-                        <br>
-                        <b>Regions seeing, at least, some parts of the eclipse:</b> Much of Europe, Much of Asia,
-                        Australia,
-                        North America, South America, Pacific, Atlantic, Arctic.
-                        <center>
-                            <img class="materialboxed" width="200"
-                                src="https://c.tadst.com/gfx/eclipses2/20201130/path-160.png">
-                            <div class="container">
-                                <h5>Days left:</h5>
-                                <ul id="ul-countdown">
-                                    <li id="li-countdown"><span id="novdays"></span>days</li>
-                                    <li id="li-countdown"><span id="novhours"></span>Hours</li>
-                                    <li id="li-countdown"><span id="novminutes"></span>Minutes</li>
-                                    <li id="li-countdown"><span id="novseconds"></span>Seconds</li>
-                                </ul>
-                                <p id="timedone" style="color: black;"></p>
-                            </div>
-                        </center>
-                    </div>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </div>

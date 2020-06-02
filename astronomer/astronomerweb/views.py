@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
+from .models import *
 
 # Create your views here.
 
 def principal(request):
-    return redirect('/my-weight')
+    sitename = 'Astromomer'
+    return redirect('/my-weight', {'sitename' : sitename})
 
 def weight(request):
     sitename = 'My Weight'
@@ -11,7 +13,9 @@ def weight(request):
 
 def nextEclipses(request):
     sitename = 'Next Eclipses'
-    return render(request, 'next_eclipses.html', {'sitename' : sitename})
+    solarEclipse = SolarEclipse.objects.all()
+    lunarEclipse = LunarEclipse.objects.all()
+    return render(request, 'next_eclipses.html', {'sitename' : sitename, 'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse})
 
 def about(request):
     sitename = 'About'

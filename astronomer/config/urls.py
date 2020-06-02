@@ -18,7 +18,7 @@ from django.urls import path
 from astronomerweb import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('astronomerAdmin/', admin.site.urls),
     path('', views.principal),
     path('my-weight/', views.weight),
     path('next-eclipses/', views.nextEclipses),
