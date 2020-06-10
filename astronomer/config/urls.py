@@ -23,4 +23,5 @@ urlpatterns = [
     path('my-weight/', views.weight),
     path('next-eclipses/', views.nextEclipses),
     path('about/', views.about),
+    path('X9VMTFaGCKp5WMp8HDL/', views.mobileapp),
 ]

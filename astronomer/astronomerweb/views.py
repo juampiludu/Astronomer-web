@@ -20,3 +20,8 @@ def nextEclipses(request):
 def about(request):
     sitename = 'About'
     return render(request, 'about.html', {'sitename' : sitename})
+
+def mobileapp(request):
+    solarEclipse = SolarEclipse.objects.all()
+    lunarEclipse = LunarEclipse.objects.all()
+    return render(request, 'mobileapp.html', {'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse})

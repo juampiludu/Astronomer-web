@@ -2,94 +2,185 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#041138">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#041138" />
     <title>{{sitename}}</title>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'admin/images/ic_launcher_foreground.png' %}" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-</head>
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'admin/images/ic_launcher_foreground.png' %}"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
 
-<nav>
+  <nav>
     <div class="nav-wrapper" id="navbar">
-        <a href="/my-weight" class="brand-logo show-on-medium-and-up" style="margin-left: 2%; background-color: #041138 !important;"><i><img
-                    class="right hide-on-med-and-down" src="{% static 'admin/images/ic_launcher_foreground.png' %}"
-                    width="65px"></i>Astronomer</a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger" style="background-color: #041138 !important;"><img src="{% static 'admin/images/menu.png' %}"
-                width="24px" style="padding-top: 80%;"></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
-                            src="{% static 'admin/images/escala.png' %}" width="24px"></i>My Weight</a></li>
-            <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
-                            src="{% static 'admin/images/rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
-            <li><a class='nav-text' href="/about"><i class="material-icons left"><img
-                            src="{% static 'admin/images/signs.png' %}" width="24px"></i>About</a></li>
-        </ul>
-    </div>
-</nav>
+      <a
+        href="/my-weight"
+        class="brand-logo show-on-medium-and-up"
+        style="margin-left: 2%; background-color: #041138 !important;"
+        ><i
+          ><img
+            class="right hide-on-med-and-down"
+            src="{% static 'admin/images/ic_launcher_foreground.png' %}"
+            width="65px" /></i
+        >Astronomer</a
+      >
+      <a
+        href="#"
+        data-target="mobile-nav"
+        class="sidenav-trigger"
+        style="background-color: #041138 !important;"
+        ><img
+          src="{% static 'admin/images/menu.png' %}"
+          width="24px"
+          style="padding-top: 80%;"
+      /></a>
 
-<ul class="sidenav" id="mobile-nav" style="z-index: 9999;">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <a class="nav-text" href="/my-weight"
+            ><i class="material-icons left"
+              ><img
+                src="{% static 'admin/images/escala.png' %}"
+                width="24px" /></i
+            >My Weight</a
+          >
+        </li>
+        <li>
+          <a class="nav-text" href="/next-eclipses"
+            ><i class="material-icons left"
+              ><img
+                src="{% static 'admin/images/rueda-dentada.png' %}"
+                width="24px" /></i
+            >Next Eclipses</a
+          >
+        </li>
+        <li>
+          <a class="nav-text" href="/about"
+            ><i class="material-icons left"
+              ><img
+                src="{% static 'admin/images/signs.png' %}"
+                width="24px" /></i
+            >About</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-nav" style="z-index: 9999;">
     <li>
-        <div class="user-view">
-            <div class="background">
-                <img src="{% static 'admin/images/header-image.png' %}" width="300px" height="200px">
-            </div>
-            <a href="#"><img class="circle" src="{% static 'admin/images/ic_launcher_foreground5.png' %}"
-                    alt="Astronomer" style="width: 100px; height: 100px;"></a>
-            <a href="#"><span class="white-text name"><b>Astronomer</b></span></a>
-            <a href="#"><span class="white-text email">My weight on other planets!</span></a>
+      <div class="user-view">
+        <div class="background">
+          <img
+            src="{% static 'admin/images/header-image.png' %}"
+            width="300px"
+            height="200px"
+          />
         </div>
+        <a href="#"
+          ><img
+            class="circle"
+            src="{% static 'admin/images/ic_launcher_foreground5.png' %}"
+            alt="Astronomer"
+            style="width: 100px; height: 100px;"
+        /></a>
+
+        <a href="#"
+          ><span class="white-text name"><b>Astronomer</b></span></a
+        >
+        <a href="#"
+          ><span class="white-text email">My weight on other planets!</span></a
+        >
+      </div>
     </li>
-    <li><a class='nav-text' href="/my-weight"><i class="material-icons left"><img
-                    src="{% static 'admin/images/escala.png' %}" width="24px"></i>My Weight</a></li>
-    <li><a class='nav-text' href="/next-eclipses"><i class="material-icons left"><img
-                    src="{% static 'admin/images/rueda-dentada.png' %}" width="24px"></i>Next Eclipses</a></li>
-    <li><a class='nav-text' href="/about"><i id="info-sidenav" class="material-icons left"><img
-                    src="{% static 'admin/images/signs.png' %}" width="24px"></i>About</a></li>
-</ul>
+    <li>
+      <a class="nav-text" href="/my-weight"
+        ><i class="material-icons left"
+          ><img src="{% static 'admin/images/escala.png' %}" width="24px" /></i
+        >My Weight</a
+      >
+    </li>
+    <li>
+      <a class="nav-text" href="/next-eclipses"
+        ><i class="material-icons left"
+          ><img
+            src="{% static 'admin/images/rueda-dentada.png' %}"
+            width="24px" /></i
+        >Next Eclipses</a
+      >
+    </li>
+    <li>
+      <a class="nav-text" href="/about"
+        ><i id="info-sidenav" class="material-icons left"
+          ><img src="{% static 'admin/images/signs.png' %}" width="24px" /></i
+        >About</a
+      >
+    </li>
+  </ul>
 
-<!-- up button -->
-<div class="fixed-action-btn">
+  <!-- up button -->
+  <div class="fixed-action-btn">
     <a class="waves-effect waves-light btn-floating btn-large" id="up-button">
-        <i class="material-icons left"><img src="{% static 'admin/images/up-arrow.png' %}"
-            style="padding-top: 17%;"></i>
+      <i class="material-icons left"
+        ><img
+          src="{% static 'admin/images/up-arrow.png' %}"
+          style="padding-top: 17%;"
+      /></i>
     </a>
-</div>
+  </div>
 
-{% block content %}
-{% endblock %}
-<footer class="page-footer" style="background-color: #041138;">
+  {% block content %} {% endblock %}
+  <footer class="page-footer" style="background-color: #041138;">
     <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Get the Android application</h5>
-                <p class="grey-text text-lighten-4">by pressing <a href="https://bit.ly/2ReNrCl"
-                        target="_blank">here</a>.</p>
-            </div>
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Get the Android application</h5>
+          <p class="grey-text text-lighten-4">
+            by pressing
+            <a href="https://bit.ly/2ReNrCl" target="_blank">here</a>.
+          </p>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2020 developed by ludev
-                <div class="right">
-                    <img src="{% static 'admin/images/github.png' %}" style="width: 15px;">
-                    <a class="grey-text text-lighten-4" href="https://github.com/juampiludu/Astronomer-web"
-                        target="_blank">
-                        GitHub</a>
-                </div>
-            </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 developed by ludev
+          <div class="right">
+            <img
+              src="{% static 'admin/images/github.png' %}"
+              style="width: 15px;"
+            />
+            <a
+              class="grey-text text-lighten-4"
+              href="https://github.com/juampiludu/Astronomer-web"
+              target="_blank"
+            >
+              GitHub</a
+            >
+          </div>
         </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<script type="text/javascript" src="{% static 'admin/js/function.js' %}"></script>
-<script src="{% static 'admin/js/particles.js' %}"></script>
-<script src="{% static 'admin/js/app.js' %}"></script>
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+  <script
+    type="text/javascript"
+    src="{% static 'admin/js/function.js' %}"
+  ></script>
+  <script src="{% static 'admin/js/particles.js' %}"></script>
+  <script src="{% static 'admin/js/app.js' %}"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </html>

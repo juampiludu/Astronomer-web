@@ -1,141 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 #coll-header {
-    background-color: #041138;
-    color: white;
+  background-color: #041138;
+  color: white;
 }
 
 .section {
-    background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
-p, a, button, div, ul, li, input, span {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px;
+p,
+a,
+button,
+div,
+ul,
+li,
+input,
+span {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Asap', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Asap", sans-serif;
 }
 
 /* nav */
 
 nav {
-    background-color: #041138 !important;
+  background-color: #041138 !important;
 }
 
 #navbar {
-    background-color: #041138;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: top 0.3s;
-    height: 64px;
-    z-index: 9998;
-  
+  background-color: #041138;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  height: 64px;
+  z-index: 9998;
 }
 
 .nav-wrapper a:hover {
-    background-color: black;
+  background-color: black;
 }
 
 /* sidenav */
 
 .sidenav {
-    background-color: #020b27 !important;
+  background-color: #020b27 !important;
 }
 
 /* nav text */
 
 .nav-text {
-    color: white !important;
+  color: white !important;
 }
 
 nav ul li.active a.nav-text {
-    background-color: #01081f;
+  background-color: #01081f;
 }
 
 /* materialize inputs */
 
 #arrow {
-    color: white;
+  color: white;
 }
 
 #input_text {
-    color: white;
+  color: white;
 }
 
 .input-field {
-    color: white;
-    min-width: 200px;
+  color: white;
+  min-width: 200px;
 }
 
 /* label focus color */
 
-.input-field input:focus+label, .input-field textarea:focus+label {
-    color: white !important;
+.input-field input:focus + label,
+.input-field textarea:focus + label {
+  color: white !important;
 }
 
-.input-field input::placeholder, .input-field textarea::placeholder {
-    color: gray !important;
+.input-field input::placeholder,
+.input-field textarea::placeholder {
+  color: gray !important;
 }
 
-.input-field input[type].invalid, .input-field input[type].invalid:focus {
-    border-bottom: 1px solid red !important;
-    box-shadow: 0 1px 0 0 red !important
+.input-field input[type].invalid,
+.input-field input[type].invalid:focus {
+  border-bottom: 1px solid red !important;
+  box-shadow: 0 1px 0 0 red !important;
 }
 
-.input-field input[type].invalid+label, .input-field input[type].invalid:focus+label {
-    color: red !important;
+.input-field input[type].invalid + label,
+.input-field input[type].invalid:focus + label {
+  color: red !important;
 }
 
-.input-field input[type=text], .input-field input[type=email], .input-field textarea[type=text] {
-    color: white !important;
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field textarea[type="text"] {
+  color: white !important;
 }
 
 /* label underline focus color */
 
-.input-field input:focus, .input-field textarea:focus {
-    border-bottom: 1px solid white !important;
-    box-shadow: 0 1px 0 0 white !important
+.input-field input:focus,
+.input-field textarea:focus {
+  border-bottom: 1px solid white !important;
+  box-shadow: 0 1px 0 0 white !important;
 }
 
 /* about.html */
 
 #body-about {
-    background-color: black;
-    background-image: linear-gradient(black,rgb(75, 75, 75));
+  background-color: black;
+  background-image: linear-gradient(black, rgb(75, 75, 75));
 }
 
 #div-about {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 #div2-about {
-    background-color: #121212;
-    margin-top: 60px;
-    max-width: 400px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px #1b1b1b ;
+  background-color: #121212;
+  margin-top: 60px;
+  max-width: 400px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px #1b1b1b;
 }
 
 #div3-about {
-    max-width: 300px;
+  max-width: 300px;
 }
 
 #action {
-    background-color: seagreen;
+  background-color: seagreen;
 }
 
 /* scroll */
@@ -143,195 +161,195 @@ nav ul li.active a.nav-text {
 /* width */
 
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+  background: #888;
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 /* ---- weight body ---- */
 
 #weight-body {
-    background-image: url("../images/black-back.jpg");
-    background-size: 640px 640px;
-    border-image-repeat: repeat;
+  background-image: url("../images/black-back.jpg");
+  background-size: 640px 640px;
+  border-image-repeat: repeat;
 }
 
 /* btns */
 
 #weight_button {
-    background-color: #041138;
-    border-radius: 30px;
-    width: 220px;
-    min-width: 120px;
-    margin-top: 30px;
+  background-color: #041138;
+  border-radius: 30px;
+  width: 220px;
+  min-width: 120px;
+  margin-top: 30px;
 }
 
 /* planets */
 
 #second {
-    align-content: center;
-    max-width: 200px;
+  align-content: center;
+  max-width: 200px;
 }
 
 #planet-div {
-    float: left;
-    clear: both;
-    width: 200px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    text-align: center;
+  float: left;
+  clear: both;
+  width: 200px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  text-align: center;
 }
 
 #mercury {
-    width: 90px;
-    transition: width 0.2s;
+  width: 90px;
+  transition: width 0.2s;
 }
 
 #venus {
-    width: 110px;
-    transition: width 0.2s;
+  width: 110px;
+  transition: width 0.2s;
 }
 
 #earth {
-    width: 115px;
-    transition: width 0.2s;
+  width: 115px;
+  transition: width 0.2s;
 }
 
 #moon {
-    width: 80px;
-    transition: width 0.2s;
+  width: 80px;
+  transition: width 0.2s;
 }
 
 #mars {
-    width: 100px;
-    transition: width 0.2s;
+  width: 100px;
+  transition: width 0.2s;
 }
 
 #jupiter {
-    width: 160px;
-    transition: width 0.2s;
+  width: 160px;
+  transition: width 0.2s;
 }
 
 #saturn {
-    width: 160px;
-    transition: width 0.2s;
+  width: 160px;
+  transition: width 0.2s;
 }
 
 #uranus {
-    width: 160px;
-    transition: width 0.2s;
+  width: 160px;
+  transition: width 0.2s;
 }
 
 #neptune {
-    width: 150px;
-    transition: width 0.2s;
+  width: 150px;
+  transition: width 0.2s;
 }
 
 #pluto {
-    width: 80px;
-    transition: width 0.2s;
+  width: 80px;
+  transition: width 0.2s;
 }
 
 p {
-    color: white;
+  color: white;
 }
 
 #planet-div:hover #mercury {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #venus {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #earth {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #moon {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #mars {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #jupiter {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #saturn {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #neptune {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #uranus {
-    width: 200px;
+  width: 200px;
 }
 
 #planet-div:hover #pluto {
-    width: 200px;
+  width: 200px;
 }
 
 #info_div {
-    background-color: #121212;
-    color: white;
-    margin: 10px;
-    min-width: 400px;
-    max-width: 800px;
-    margin-top: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px #242424 ;
+  background-color: #121212;
+  color: white;
+  margin: 10px;
+  min-width: 400px;
+  max-width: 800px;
+  margin-top: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px #242424;
 }
 
 /* Countdown */
 
 #li-countdown {
-    display: inline-block;
-    font-size: 20px;
-    list-style-type: none;
-    padding: 15px;
-    text-transform: uppercase;
+  display: inline-block;
+  font-size: 20px;
+  list-style-type: none;
+  padding: 15px;
+  text-transform: uppercase;
 }
 
 #li-countdown span {
-    display: block;
-    font-size: 20px;
+  display: block;
+  font-size: 20px;
 }
 
 /* up-button */
 
 #up-button {
-    visibility: hidden;
-    background-color: orangered;
-    opacity: 0;
-    transition: background-color .3s, opacity .5s, visibility .5s;
+  visibility: hidden;
+  background-color: orangered;
+  opacity: 0;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
 }
 
 #up-button:hover {
-    background-color: #121212;
+  background-color: #121212;
 }
 
 #up-button.show {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
