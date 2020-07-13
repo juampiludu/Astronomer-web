@@ -4,7 +4,20 @@
   <!-- Solar section -->
   <div class="section">
     <div class="row container">
-      <h2 class="header">Solar Eclipses in 2020</h2>
+
+      <!-- Dropdown Trigger -->
+      <p class="grey-text text-darken-3 lighten-3">Select a year to display the eclipses:     
+        <a class='dropdown-trigger btn black-text white' href='#' data-target='dropdown1'>{{year}}</a>
+      </p>
+
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        {% for year in years %}
+        <li><a href="{% url 'nextEclipses' year=year.year %}" id="dropdown-content">{{year.year}}</a></li>
+        {% endfor %}
+      </ul>
+
+      <h2 class="header">Solar Eclipses in {{year}}</h2>
       <p class="grey-text text-darken-3 lighten-3">
         A solar eclipse occurs when a portion of the Earth is engulfed in a
         shadow cast by the Moon which fully or partially blocks sunlight. This
@@ -21,6 +34,7 @@
     <div class="row container">
       <ul class="collapsible popout">
         {% for eclipse in solarEclipse %}
+        {% if year in eclipse.eclipse_date %}
         <li>
           <div class="collapsible-header" id="coll-header">
             <img
@@ -37,7 +51,6 @@
             <center>
               <div class="container">
                 <h5>Days left:</h5>
-                {{eclipse.eclipse_datetime}}
                 <ul id="solar{{eclipse.id}}ul-countdown">
                   <li id="li-countdown">
                     <span id="solar{{eclipse.id}}days"></span>days
@@ -65,6 +78,7 @@
             </center>
           </div>
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </div>
@@ -74,6 +88,7 @@
       <img src="{% static 'admin/images/solar2.jpg' %}" />
     </div>
   </div>
+  <!-- Solar section ends -->
   <!-- Lunar section -->
   <div class="section">
     <div class="row container">
@@ -96,6 +111,7 @@
     <div class="row container">
       <ul class="collapsible popout">
         {% for eclipse in lunarEclipse %}
+        {% if year in eclipse.eclipse_date %}
         <li>
           <div class="collapsible-header" id="coll-header">
             <img
@@ -139,10 +155,12 @@
             </center>
           </div>
         </li>
+        {% endif %}
         {% endfor %}
       </ul>
     </div>
   </div>
+  <!-- Lunar section ends -->
   <div class="parallax-container">
     <div class="parallax">
       <img src="{% static 'admin/images/lunar2.jpg' %}" />

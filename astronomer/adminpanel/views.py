@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from astronomerweb.models import Eclipses
+from .models import Years
 from django.contrib.auth import login, logout, authenticate
 from datetime import datetime
 
@@ -14,7 +15,7 @@ def parseTime(time):
 def parseDate(date):
 
     a = datetime.strptime(date, '%m/%d/%Y')
-    b = datetime.strftime(a, '%B %-d')
+    b = datetime.strftime(a, '%B %-d, %Y')
     return b
 
 def parseDateForCountdown(date):
@@ -131,3 +132,30 @@ def delete_item(request, id):
     eclipses.delete()
 
     return redirect('eclipseTable')
+
+def add_year(request):
+
+    years = Years.objects.all().order_by('year')
+
+    if request.method == 'POST':
+
+        year = request.POST.get('year')
+
+        if year != "":
+
+            if year != None:
+
+                year = Years(year=str(year))
+                year.save()
+
+                return redirect('add_year')
+
+    return render(request, 'back/add_year.html', {'range' : range(2000, 2101), 'years' : years})
+
+def delete_year(request, year):
+
+    years = Years.objects.get(year=year)
+
+    years.delete()
+
+    return redirect('add_year')

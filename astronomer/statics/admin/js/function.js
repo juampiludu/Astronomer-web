@@ -11,6 +11,7 @@ $(document).ready(function () {
   $(".fixed-action-btn").floatingActionButton();
   /*$('.tooltipped').tooltip();*/
   M.updateTextFields();
+  $('.dropdown-trigger').dropdown();
 });
 
 const earth = 9.807;

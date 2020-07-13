@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Years
 
-# Register your models here.
+@admin.register(Years)
+class YearsAdmin(admin.ModelAdmin):
+    list_display = ('year',)

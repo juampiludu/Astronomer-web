@@ -365,3 +365,12 @@ p {
   visibility: visible;
   opacity: 1;
 }
+
+#dropdown-content, .dropdown-trigger {
+  font-family: "Asap", sans-serif;
+  color: black;
+}
+
+.dropdown-trigger {
+  margin-left: 20px;
+}

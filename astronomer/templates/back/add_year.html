@@ -1,0 +1,164 @@
+{% extends 'back/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<!-- Tempusdominus Bbootstrap 4 -->
+<link rel="stylesheet" href="{% static 'admin/back/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+<!-- summernote -->
+<link rel="stylesheet" href="{% static 'admin/back/plugins/summernote/summernote-bs4.css' %}">
+{% endblock %}
+
+{% block mainblock %}
+
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Add Years</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Years</a></li>
+              <li class="breadcrumb-item active">Add</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">General</h3>
+
+            </div>
+            <div class="card-body">
+              <form action="{% url 'add_year' %}" method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <label for="inputStatus">Select a year:</label>
+                      <select class="form-control custom-select" name="year">
+                        {% for a in range %}
+                        <option value="{{a}}">{{a}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                <div class="row">
+                  <div class="col-12">
+                    <input type="submit" value="Add" class="btn btn-success btn-block">
+                  </div>
+                </div>
+            </form>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+      <center>
+      <div class="col-6">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Years Added</h3>
+
+              <div class="card-tools">
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+              <table class="table table-hover text-nowrap">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for year in years %}
+                  <tr>
+                    <td>{{year.year}} <a href="{% url 'delete_year' year=year.year %}">Delete</a></td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        </center>
+      <!-- /.col-6 -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Select2 -->
+<script src="{% static 'admin/back/plugins/select2/js/select2.full.min.js' %}"></script>
+<!-- InputMask -->
+<script src="{% static 'admin/back/plugins/moment/moment.min.js' %}"></script>
+<script src="{% static 'admin/back/plugins/inputmask/min/jquery.inputmask.bundle.min.js' %}"></script>
+<!-- date-range-picker -->
+<script src="{% static 'admin/back/plugins/daterangepicker/daterangepicker.js' %}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{% static 'admin/back/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+<script>
+    $(function () {
+      //Initialize Select2 Elements
+      $('.select2').select2()
+  
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+  
+      //Datemask dd/mm/yyyy
+      $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+      //Datemask2 mm/dd/yyyy
+      $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+      //Money Euro
+      $('[data-mask]').inputmask()
+  
+      //Date range picker
+      $('#reservationdate').datetimepicker({
+          format: 'L'
+      });
+      //Date range picker
+      $('#reservation').daterangepicker()
+      //Date range picker with time picker
+      $('#reservationtime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+          format: 'MM/DD/YYYY hh:mm A'
+        }
+      })
+      //Timepicker
+      $('#timepicker').datetimepicker({
+        format: 'LT'
+      })
+      
+      //Bootstrap Duallistbox
+      $('.duallistbox').bootstrapDualListbox()
+  
+    })
+  </script>
+
+  <!-- Summernote -->
+    <script src="{% static 'admin/back/plugins/summernote/summernote-bs4.min.js' %}"></script>
+    <script>
+    $(function () {
+        // Summernote
+        $('.textarea').summernote()
+    })
+    </script>
+{% endblock %}
