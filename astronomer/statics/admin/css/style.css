@@ -282,43 +282,43 @@ p {
   color: white;
 }
 
-#planet-div:hover #mercury {
+#mercury:hover {
   width: 200px;
 }
 
-#planet-div:hover #venus {
+#venus:hover {
   width: 200px;
 }
 
-#planet-div:hover #earth {
+#earth:hover {
   width: 200px;
 }
 
-#planet-div:hover #moon {
+#moon:hover {
   width: 200px;
 }
 
-#planet-div:hover #mars {
+#mars:hover {
   width: 200px;
 }
 
-#planet-div:hover #jupiter {
+#jupiter:hover {
   width: 200px;
 }
 
-#planet-div:hover #saturn {
+#saturn:hover {
   width: 200px;
 }
 
-#planet-div:hover #neptune {
+#neptune:hover {
   width: 200px;
 }
 
-#planet-div:hover #uranus {
+#uranus:hover {
   width: 200px;
 }
 
-#planet-div:hover #pluto {
+#pluto:hover {
   width: 200px;
 }
 

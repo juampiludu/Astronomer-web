@@ -25,8 +25,8 @@ SECRET_KEY = '#q9(v$_wylyxz__&gq560ory_6qqvna@se))x37ev_vn&-781f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['astronomerweb.pythonanywhere.com']
-#ALLOWED_HOSTS = ['*']
+#ALLOWED_HOSTS = ['astronomerweb.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

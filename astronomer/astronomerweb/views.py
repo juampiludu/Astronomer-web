@@ -12,7 +12,7 @@ def principal(request):
 def weight(request):
     sitename = 'My Weight'
     #current_year = datetime.now().year
-    return render(request, 'front/weight.html', {'sitename' : sitename, 'current_year' : current_year})
+    return render(request, 'front/weight.html', {'sitename' : sitename})
 
 def nextEclipses(request, year):
     years = Years.objects.all()
