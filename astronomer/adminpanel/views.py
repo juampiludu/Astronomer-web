@@ -3,6 +3,7 @@ from astronomerweb.models import Eclipses
 from .models import Years
 from django.contrib.auth import login, logout, authenticate
 from datetime import datetime
+from django.core.files.storage import FileSystemStorage
 
 # Time functions
 
@@ -80,47 +81,81 @@ def add_eclipse(request):
         eclipse_date = request.POST.get('eclipse_date')
         eclipse_time = request.POST.get('eclipse_time')
 
-        if solar_lunar != "" and eclipse_type != "" and eclipse_info != "" and eclipse_date != "" and eclipse_time != "":
-
-            title = f'{parseDate(eclipse_date)} at {parseTime(eclipse_time)} GMT ({eclipse_type})'
-            datetimex = f'{parseDateForCountdown(eclipse_date)} {parseTime(eclipse_time)}:00'
-            a = Eclipses(eclipse_title=title, solar_lunar=solar_lunar, eclipse_type=eclipse_type, eclipse_info=eclipse_info, eclipse_date=eclipse_date, eclipse_time=eclipse_time, eclipse_datetime=datetimex)
-            a.save()
-            return redirect('eclipseTable')
-
-        else:
-
+        if solar_lunar == "" or eclipse_type == "" or eclipse_info == "" or eclipse_date == "" or eclipse_time == "":
             error = "You have to complete all fields"
+            return render(request, 'back/error_page.html', {'error' : error})
+
+        try:
+
+            myfile = request.FILES['myfile']
+            fs = FileSystemStorage()
+            filename = fs.save(myfile.name, myfile)
+            url = fs.url(filename)
+
+            if str(myfile.content_type).startswith("image"):
+
+                title = f'{parseDate(eclipse_date)} at {parseTime(eclipse_time)} GMT ({eclipse_type})'
+                datetimex = f'{parseDateForCountdown(eclipse_date)} {parseTime(eclipse_time)}:00'
+                a = Eclipses(eclipse_title=title, solar_lunar=solar_lunar, eclipse_type=eclipse_type, eclipse_info=eclipse_info, eclipse_image_name=filename, eclipse_image_url=url, eclipse_date=eclipse_date, eclipse_time=eclipse_time, eclipse_datetime=datetimex)
+                a.save()
+                return redirect('eclipseTable')
+
+            else:
+
+                fs.delete()
+                error = "This file is not supported. Make sure if you are uploading an image file"
+                return render(request, 'back/error_page.html', {'error' : error})
+
+        except:
+
+            error = "Choose an image to upload"
             return render(request, 'back/error_page.html', {'error' : error})
 
     return render(request, 'back/add_eclipse.html')
 
 def edit_eclipse(request, id):
 
+    if len(Eclipses.objects.filter(id=id)) == 0:
+        return render(request, 'back/500.html', {'id' : id})
+
     if not request.user.is_authenticated:
         return redirect('mylogin')
 
-    try:
+    eclipses = Eclipses.objects.get(id=id)
 
-        eclipses = Eclipses.objects.get(id=id)
+    if request.method == 'POST':
 
-        if request.method == 'POST':
+        solar_lunar = request.POST.get('solar_lunar')
+        eclipse_type = request.POST.get('eclipse_type')
+        eclipse_info = request.POST.get('eclipse_info')
+        eclipse_date = request.POST.get('eclipse_date')
+        eclipse_time = request.POST.get('eclipse_time')
 
-            solar_lunar = request.POST.get('solar_lunar')
-            eclipse_type = request.POST.get('eclipse_type')
-            eclipse_info = request.POST.get('eclipse_info')
-            eclipse_date = request.POST.get('eclipse_date')
-            eclipse_time = request.POST.get('eclipse_time')
+        if solar_lunar == "" or eclipse_type == "" or eclipse_info == "" or eclipse_date == "" or eclipse_time == "":
+            error = "You have to complete all fields"
+            return render(request, 'back/error_page.html', {'error' : error})
 
-            if solar_lunar != "" and eclipse_type != "" and eclipse_info != "" and eclipse_date != "" and eclipse_time != "":
+        try:
+
+            myfile = request.FILES['myfile']
+            fs = FileSystemStorage()
+            filename = fs.save(myfile.name, myfile)
+            url = fs.url(filename)
+
+            if str(myfile.content_type).startswith("image"):
 
                 title = f'{parseDate(eclipse_date)} at {parseTime(eclipse_time)} GMT ({eclipse_type})'
-                datetimex = f'{parseDateForCountdown(eclipse_date)}, {parseTime(eclipse_time)}:00'
-                
+                datetimex = f'{parseDateForCountdown(eclipse_date)} {parseTime(eclipse_time)}:00'
+
+                fss = FileSystemStorage()
+                fss.delete(eclipses.eclipse_image_name)
+
                 eclipses.eclipse_title = title
                 eclipses.solar_lunar = solar_lunar
                 eclipses.eclipse_type = eclipse_type
                 eclipses.eclipse_info = eclipse_info
+                eclipses.eclipse_image_name = filename
+                eclipses.eclipse_image_url = url
                 eclipses.eclipse_date = eclipse_date
                 eclipses.eclipse_time = eclipse_time
                 eclipses.eclipse_datetime = datetimex
@@ -129,12 +164,23 @@ def edit_eclipse(request, id):
 
             else:
 
-                error = "You have to complete all fields"
+                fs.delete()
+                error = "This file is not supported. Make sure if you are uploading an image file"
                 return render(request, 'back/error_page.html', {'error' : error})
 
-    except:
+        except:
 
-        return render(request, 'back/500.html', {'id' : id})
+            title = f'{parseDate(eclipse_date)} at {parseTime(eclipse_time)} GMT ({eclipse_type})'
+            datetimex = f'{parseDateForCountdown(eclipse_date)} {parseTime(eclipse_time)}:00'
+            eclipses.eclipse_title = title
+            eclipses.solar_lunar = solar_lunar
+            eclipses.eclipse_type = eclipse_type
+            eclipses.eclipse_info = eclipse_info
+            eclipses.eclipse_date = eclipse_date
+            eclipses.eclipse_time = eclipse_time
+            eclipses.eclipse_datetime = datetimex
+            eclipses.save()
+            return redirect('eclipseTable')
 
     return render(request, 'back/edit_eclipse.html', {'eclipses' : eclipses, 'id' : id})
 
@@ -146,14 +192,15 @@ def delete_item(request, id):
     try:
 
         eclipses = Eclipses.objects.get(id=id)
-
+        fs = FileSystemStorage()
+        fs.delete(eclipses.eclipse_image_name)
         eclipses.delete()
-
-        return redirect('eclipseTable')
 
     except:
 
         return render(request, 'back/500.html', {'id' : id})
+
+    return redirect('eclipseTable')
 
 def add_year(request):
 
