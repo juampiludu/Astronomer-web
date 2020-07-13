@@ -3,13 +3,8 @@ from .models import *
 
 # Register your models here.
 
-@admin.register(LunarEclipse)
-@admin.register(SolarEclipse)
+@admin.register(Eclipses)
 
-class LunarEclipseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'date_type')
-    list_display_links = ('id', 'date_type')
-
-class SolarEclipseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'date_type')
-    list_display_links = ('id', 'date_type')
+class EclipsesAdmin(admin.ModelAdmin):
+    list_display = ('id', 'eclipse_title', 'solar_lunar')
+    list_display_links = ('id', 'eclipse_title', 'solar_lunar')

@@ -1,0 +1,175 @@
+{% extends 'back/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<!-- Tempusdominus Bbootstrap 4 -->
+<link rel="stylesheet" href="{% static 'admin/back/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
+<!-- summernote -->
+<link rel="stylesheet" href="{% static 'admin/back/plugins/summernote/summernote-bs4.css' %}">
+{% endblock %}
+
+{% block mainblock %}
+
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Add Eclipses</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Eclipses</a></li>
+              <li class="breadcrumb-item active">Add</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">General</h3>
+
+            </div>
+            <div class="card-body">
+              <form action="{% url 'add_eclipse' %}" method="POST">
+                  {% csrf_token %}
+                  <div class="form-group">
+                      <label for="inputStatus">Select if the eclipse is Solar or Lunar:</label>
+                      <select class="form-control custom-select" name="solar_lunar">
+                        <option selected disabled>Select one</option>
+                        <option value="Solar">Solar</option>
+                        <option value="Lunar">Lunar</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputStatus">Select the type of the eclipse:</label>
+                      <select class="form-control custom-select" name="eclipse_type">
+                        <option selected disabled>Select one</option>
+                        <option value="Total">Total (Solar)</option>
+                        <option value="Partial">Partial (Solar)</option>
+                        <option value="Annular">Annular (Solar)</option>
+                        <option value="Hybrid">Hybrid (Solar)</option>
+                        <option value="Total">Total (Lunar)</option>
+                        <option value="Partial">Partial (Lunar)</option>
+                        <option value="Pennumbral">Pennumbral (Lunar)</option>
+                      </select>
+                    </div>
+                <div class="form-group">
+                  <label for="inputDescription">Some info about eclipse:</label>
+                  <div class="mb-3">
+                      <textarea class="textarea" name="eclipse_info" placeholder="Place some text here"
+                                style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>Date:</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                      <input type="text" name="eclipse_date" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                      <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                      </div>
+                  </div>
+              </div>
+              <div class="bootstrap-timepicker">
+                  <div class="form-group">
+                    <label>Time:</label>
+
+                    <div class="input-group date" id="timepicker" data-target-input="nearest">
+                      <input type="text" name="eclipse_time" class="form-control datetimepicker-input" data-target="#timepicker"/>
+                      <div class="input-group-append" data-target="#timepicker" data-toggle="datetimepicker">
+                          <div class="input-group-text"><i class="far fa-clock"></i></div>
+                      </div>
+                      </div>
+                    <!-- /.input group -->
+                  </div>
+                  <!-- /.form group -->
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <input type="submit" value="Add" class="btn btn-success btn-block">
+                  </div>
+                </div>
+            </form>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Select2 -->
+<script src="{% static 'admin/back/plugins/select2/js/select2.full.min.js' %}"></script>
+<!-- InputMask -->
+<script src="{% static 'admin/back/plugins/moment/moment.min.js' %}"></script>
+<script src="{% static 'admin/back/plugins/inputmask/min/jquery.inputmask.bundle.min.js' %}"></script>
+<!-- date-range-picker -->
+<script src="{% static 'admin/back/plugins/daterangepicker/daterangepicker.js' %}"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="{% static 'admin/back/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js' %}"></script>
+<script>
+    $(function () {
+      //Initialize Select2 Elements
+      $('.select2').select2()
+  
+      //Initialize Select2 Elements
+      $('.select2bs4').select2({
+        theme: 'bootstrap4'
+      })
+  
+      //Datemask dd/mm/yyyy
+      $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+      //Datemask2 mm/dd/yyyy
+      $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+      //Money Euro
+      $('[data-mask]').inputmask()
+  
+      //Date range picker
+      $('#reservationdate').datetimepicker({
+          format: 'L'
+      });
+      //Date range picker
+      $('#reservation').daterangepicker()
+      //Date range picker with time picker
+      $('#reservationtime').daterangepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+          format: 'MM/DD/YYYY hh:mm A'
+        }
+      })
+      //Timepicker
+      $('#timepicker').datetimepicker({
+        format: 'LT'
+      })
+      
+      //Bootstrap Duallistbox
+      $('.duallistbox').bootstrapDualListbox()
+  
+    })
+  </script>
+
+  <!-- Summernote -->
+    <script src="{% static 'admin/back/plugins/summernote/summernote-bs4.min.js' %}"></script>
+    <script>
+    $(function () {
+        // Summernote
+        $('.textarea').summernote()
+    })
+    </script>
+{% endblock %}

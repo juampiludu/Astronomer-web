@@ -1,0 +1,107 @@
+{% extends 'back/base.html' %}
+{% load static %}
+
+{% block headblock %}
+<link rel="stylesheet" href="{% static 'admin/back/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css' %}">
+<link rel="stylesheet" href="{% static 'admin/back/plugins/datatables-responsive/css/responsive.bootstrap4.min.css' %}">
+{% endblock %}
+
+{% block mainblock %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Eclipses Table</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Eclipses</a></li>
+              <li class="breadcrumb-item active">Table</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Eclipse Type</th>
+                    <th>Information</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  {% for e in eclipses %}
+                  <tr>
+                    <td><a href="{% url 'edit_eclipse' id=e.id %}">{{e.eclipse_title}}</a>
+                    </td>
+                    <td>{{e.solar_lunar}}</td>
+                    <td>{{e.eclipse_info|safe}}</td>
+                    <td>{{e.eclipse_date}}</td>
+                    <td><a href="{% url 'delete_item' id=e.id %}"><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></a></td>
+                  </tr>
+                  {% endfor %}
+                  </tbody>
+                  <tfoot>
+                  <tr>
+                    <th>Title</th>
+                    <th>Eclipse Type</th>
+                    <th>Information</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                  </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Datatables -->
+<script src="{% static 'admin/back/dist/js/demo.js' %}"></script>
+<script src="{% static 'admin/back/plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'admin/back/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'admin/back/plugins/datatables-responsive/js/dataTables.responsive.min.js' %}"></script>
+<script src="{% static 'admin/back/plugins/datatables-responsive/js/responsive.bootstrap4.min.js' %}"></script>
+<script>
+    $(function () {
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false,
+        "responsive": true,
+      });
+    });
+  </script>
+{% endblock %}

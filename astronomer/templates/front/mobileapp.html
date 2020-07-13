@@ -1,0 +1,182 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#041138" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'admin/images/ic_launcher_foreground.png' %}"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+
+  <!-- up button -->
+  <div class="fixed-action-btn">
+    <a class="waves-effect waves-light btn-floating btn-large" id="up-button">
+      <i class="material-icons left"
+        ><img
+          src="{% static 'admin/images/up-arrow.png' %}"
+          style="padding-top: 17%;"
+      /></i>
+    </a>
+  </div>
+
+  <body>
+    <!-- Solar section -->
+  <div class="section">
+    <div class="row container">
+      <h2 class="header">Solar Eclipses in 2020</h2>
+      <p class="grey-text text-darken-3 lighten-3">
+        A solar eclipse occurs when a portion of the Earth is engulfed in a
+        shadow cast by the Moon which fully or partially blocks sunlight. This
+        occurs when the Sun, Moon and Earth are aligned.
+      </p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{% static 'admin/images/solar.jpg' %}" />
+    </div>
+  </div>
+  <div class="section">
+    <div class="row container">
+      <ul class="collapsible popout">
+        {% for eclipse in solarEclipse %}
+        <li>
+          <div class="collapsible-header" id="coll-header">
+            <img
+              style="margin-right: 10px;"
+              width="24"
+              height="24"
+              src="{% static 'admin/images/sun.png' %}"
+            />
+            {{eclipse.eclipse_title}}
+          </div>
+          <div class="collapsible-body">
+            {{eclipse.eclipse_info|safe}}
+            <br />
+            <center>
+              <div class="container">
+                <h5>Days left:</h5>
+                <ul id="solar{{eclipse.id}}ul-countdown">
+                  <li id="li-countdown">
+                    <span id="solar{{eclipse.id}}days"></span>days
+                  </li>
+                  <li id="li-countdown">
+                    <span id="solar{{eclipse.id}}hours"></span>Hours
+                  </li>
+                  <li id="li-countdown">
+                    <span id="solar{{eclipse.id}}minutes"></span>Minutes
+                  </li>
+                  <li id="li-countdown">
+                    <span id="solar{{eclipse.id}}seconds"></span>Seconds
+                  </li>
+                </ul>
+                <p id="solar{{eclipse.id}}timedone" style="color: black;"></p>
+                <p style="visibility: hidden;" id="solar{{eclipse.id}}date">
+                  {{eclipse.date}}
+                </p>
+              </div>
+            </center>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{% static 'admin/images/solar2.jpg' %}" />
+    </div>
+  </div>
+  <!-- Lunar section -->
+  <div class="section">
+    <div class="row container">
+      <h2 class="header">Lunar Eclipses in 2020</h2>
+      <p class="grey-text text-darken-3 lighten-3">
+        A lunar eclipse occurs when the Moon moves into the Earth's shadow. This
+        can occur only when the Sun, Earth, and Moon are exactly or very closely
+        aligned, with Earth between the other two. A lunar eclipse can occur
+        only on the night of a full moon. The type and length of a lunar eclipse
+        depend on the Moon's proximity to either node of its orbit.
+      </p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="{% static 'admin/images/lunar.jpg' %}" />
+    </div>
+  </div>
+  <div class="section">
+    <div class="row container">
+      <ul class="collapsible popout">
+        {% for eclipse in lunarEclipse %}
+        <li>
+          <div class="collapsible-header" id="coll-header">
+            <img
+              style="margin-right: 10px;"
+              width="24"
+              height="24"
+              src="{% static 'admin/images/moon.png' %}"
+            />
+            {{eclipse.eclipse_title}}
+          </div>
+          <div class="collapsible-body">
+            {{eclipse.eclipse_info|safe}}
+            <br />
+            <center>
+            <div class="container">
+                <h5>Days left:</h5>
+                <ul id="lunar{{eclipse.id}}ul-countdown">
+                  <li id="li-countdown">
+                    <span id="lunar{{eclipse.id}}days"></span>days
+                  </li>
+                  <li id="li-countdown">
+                    <span id="lunar{{eclipse.id}}hours"></span>Hours
+                  </li>
+                  <li id="li-countdown">
+                    <span id="lunar{{eclipse.id}}minutes"></span>Minutes
+                  </li>
+                  <li id="li-countdown">
+                    <span id="lunar{{eclipse.id}}seconds"></span>Seconds
+                  </li>
+                </ul>
+                <p id="lunar{{eclipse.id}}timedone" style="color: black;"></p>
+                <p style="visibility: hidden;" id="lunar{{eclipse.id}}date">
+                  {{eclipse.date}}
+                </p>
+              </div>
+            </center>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="{% static 'admin/images/lunar2.jpg' %}" />
+      </div>
+    </div>
+
+    <script src="{% static 'admin/js/countdown.js' %}"></script>
+    <script src="{% static 'admin/js/function.js' %}"></script>
+    <script src="{% static 'admin/js/particles.js' %}"></script>
+    <script src="{% static 'admin/js/app.js' %}"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>

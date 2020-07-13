@@ -1,9 +1,3 @@
-downCount("solar1");
-downCount("solar2");
-downCount("lunar1");
-downCount("lunar2");
-downCount("lunar3");
-
 function downCount(solorlunid) {
   const second = 1000,
     minute = second * 60,

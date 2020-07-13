@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import *
+from .models import Eclipses
 
 # Create your views here.
 
@@ -9,19 +9,19 @@ def principal(request):
 
 def weight(request):
     sitename = 'My Weight'
-    return render(request, 'weight.html', {'sitename' : sitename})
+    return render(request, 'front/weight.html', {'sitename' : sitename})
 
 def nextEclipses(request):
     sitename = 'Next Eclipses'
-    solarEclipse = SolarEclipse.objects.all()
-    lunarEclipse = LunarEclipse.objects.all()
-    return render(request, 'next_eclipses.html', {'sitename' : sitename, 'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse})
+    solarEclipse = Eclipses.objects.filter(solar_lunar='Solar')
+    lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar')
+    return render(request, 'front/next_eclipses.html', {'sitename' : sitename, 'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse})
 
 def about(request):
     sitename = 'About'
-    return render(request, 'about.html', {'sitename' : sitename})
+    return render(request, 'front/about.html', {'sitename' : sitename})
 
 def mobileapp(request):
-    solarEclipse = SolarEclipse.objects.all()
-    lunarEclipse = LunarEclipse.objects.all()
-    return render(request, 'mobileapp.html', {'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse})
+    solarEclipse = Eclipses.objects.filter(solar_lunar='Solar')
+    lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar')
+    return render(request, 'front/mobileapp.html', {'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse})

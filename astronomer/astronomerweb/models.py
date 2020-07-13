@@ -1,17 +1,10 @@
 from django.db import models
 
-# Create your models here.
-
-class SolarEclipse(models.Model):
-    date_type = models.CharField(max_length=30, null=False)
-    eclipse_info = models.TextField(null=False)
-    short_eclipse_info = models.TextField(null=False, default="")
-    eclipse_image_route = models.CharField(max_length=100, null=False)
-    date = models.CharField(max_length=40, null=False)
-
-class LunarEclipse(models.Model):
-    date_type = models.CharField(max_length=30, null=False)
-    eclipse_info = models.TextField(null=False)
-    short_eclipse_info = models.TextField(null=False, default="")
-    eclipse_image_route = models.CharField(max_length=100, null=False)
-    date = models.CharField(max_length=40, null=False)
+class Eclipses(models.Model):
+    eclipse_title = models.CharField(max_length=50)
+    solar_lunar = models.CharField(max_length=50)
+    eclipse_type = models.CharField(max_length=50)
+    eclipse_info = models.TextField()
+    eclipse_date = models.CharField(max_length=50)
+    eclipse_time = models.CharField(max_length=50, default="")
+    eclipse_datetime = models.CharField(max_length=50, default="")

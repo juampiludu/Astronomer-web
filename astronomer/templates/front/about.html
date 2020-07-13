@@ -1,0 +1,72 @@
+{% extends 'front/base.html' %} {% load static %} {% block content %}
+
+<body id="body-about">
+  <center>
+    <div>
+      <div id="div-about">
+        <p>The equation to know your weight in other planets is:</p>
+        <img
+          class="materialboxed responsive-img"
+          src="{% static 'admin/images/example1.png' %}"
+        />
+      </div>
+      <div id="div-about">
+        <p>For example in Mars:</p>
+        <img
+          class="materialboxed responsive-img"
+          src="{% static 'admin/images/example2.jpg' %}"
+        />
+      </div>
+    </div>
+    <div id="div2-about">
+      <div id="div3-about">
+        <h5 style="color: white;">
+          If you have any question or you want to report an issue, do not
+          hesitate to contact us!
+        </h5>
+        <form class="sendEmail" method="POST" autocomplete="off">
+          <div class="input-field">
+            <input
+              type="email"
+              id="from"
+              class="validate"
+              placeholder="example@email.com"
+              data-required="true"
+            />
+            <label for="from">Email</label>
+          </div>
+          <div class="input-field">
+            <input type="text" id="subject" data-required="true" />
+            <label for="subject">Subject</label>
+          </div>
+          <div class="input-field">
+            <textarea
+              id="emailbody"
+              type="text"
+              class="materialize-textarea"
+              data-required="true"
+            ></textarea>
+            <label for="emailbody">Description</label>
+          </div>
+          <div>
+            <button
+              class="btn waves-effect waves-light right"
+              type="submit"
+              id="action"
+            >
+              Send<i class="material-icons right">send</i>
+            </button>
+            <br />
+            <br />
+            <div class="mdl-spinner mdl-js-spinner is-active"></div>
+            <span class="success-help" style="color: white;"
+              >Your message has been sent!</span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </center>
+</body>
+
+{% endblock %}
