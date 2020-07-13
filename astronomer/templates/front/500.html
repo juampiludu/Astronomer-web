@@ -1,0 +1,23 @@
+{% extends 'front/base.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <div id="site-wrapper-500">
+        <center>
+            <!-- Dropdown Trigger -->
+            <p class="grey-text text-darken-3 lighten-3">Select a year to display the eclipses:     
+                <a class='dropdown-trigger btn black-text white' href='#' data-target='dropdown1'>{{year}}</a>
+            </p>
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                {% for year in years %}
+                <li><a href="{% url 'nextEclipses' year=year.year %}" id="dropdown-content">{{year.year}}</a></li>
+                {% endfor %}
+            </ul>
+            <h1>500</h1>
+            <p class="grey-text text-darken-3 lighten-3">The year selected isn't available yet. Try selecting another one.</p>
+        </center>
+    </div>
+</body>
+{% endblock %}

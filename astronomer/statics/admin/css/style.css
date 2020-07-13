@@ -17,6 +17,11 @@ main {
   flex: 1 0 auto;
 }
 
+#site-wrapper-500 {
+  margin-bottom: 35%; 
+  margin-top: 15%;
+}
+
 #coll-header {
   background-color: #041138;
   color: white;

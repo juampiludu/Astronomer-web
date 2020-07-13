@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from astronomerweb.models import Eclipses
 from .models import Years
 from django.contrib.auth import login, logout, authenticate
@@ -88,6 +88,11 @@ def add_eclipse(request):
             a.save()
             return redirect('eclipseTable')
 
+        else:
+
+            error = "You have to complete all fields"
+            return render(request, 'back/error_page.html', {'error' : error})
+
     return render(request, 'back/add_eclipse.html')
 
 def edit_eclipse(request, id):
@@ -95,30 +100,41 @@ def edit_eclipse(request, id):
     if not request.user.is_authenticated:
         return redirect('mylogin')
 
-    eclipses = Eclipses.objects.get(id=id)
+    try:
 
-    if request.method == 'POST':
+        eclipses = Eclipses.objects.get(id=id)
 
-        solar_lunar = request.POST.get('solar_lunar')
-        eclipse_type = request.POST.get('eclipse_type')
-        eclipse_info = request.POST.get('eclipse_info')
-        eclipse_date = request.POST.get('eclipse_date')
-        eclipse_time = request.POST.get('eclipse_time')
+        if request.method == 'POST':
 
-        if solar_lunar != "" and eclipse_type != "" and eclipse_info != "" and eclipse_date != "" and eclipse_time != "":
+            solar_lunar = request.POST.get('solar_lunar')
+            eclipse_type = request.POST.get('eclipse_type')
+            eclipse_info = request.POST.get('eclipse_info')
+            eclipse_date = request.POST.get('eclipse_date')
+            eclipse_time = request.POST.get('eclipse_time')
 
-            title = f'{parseDate(eclipse_date)} at {parseTime(eclipse_time)} GMT ({eclipse_type})'
-            datetimex = f'{parseDateForCountdown(eclipse_date)}, {parseTime(eclipse_time)}:00'
-            
-            eclipses.eclipse_title = title
-            eclipses.solar_lunar = solar_lunar
-            eclipses.eclipse_type = eclipse_type
-            eclipses.eclipse_info = eclipse_info
-            eclipses.eclipse_date = eclipse_date
-            eclipses.eclipse_time = eclipse_time
-            eclipses.eclipse_datetime = datetimex
-            eclipses.save()
-            return redirect('eclipseTable')
+            if solar_lunar != "" and eclipse_type != "" and eclipse_info != "" and eclipse_date != "" and eclipse_time != "":
+
+                title = f'{parseDate(eclipse_date)} at {parseTime(eclipse_time)} GMT ({eclipse_type})'
+                datetimex = f'{parseDateForCountdown(eclipse_date)}, {parseTime(eclipse_time)}:00'
+                
+                eclipses.eclipse_title = title
+                eclipses.solar_lunar = solar_lunar
+                eclipses.eclipse_type = eclipse_type
+                eclipses.eclipse_info = eclipse_info
+                eclipses.eclipse_date = eclipse_date
+                eclipses.eclipse_time = eclipse_time
+                eclipses.eclipse_datetime = datetimex
+                eclipses.save()
+                return redirect('eclipseTable')
+
+            else:
+
+                error = "You have to complete all fields"
+                return render(request, 'back/error_page.html', {'error' : error})
+
+    except:
+
+        return render(request, 'back/500.html', {'id' : id})
 
     return render(request, 'back/edit_eclipse.html', {'eclipses' : eclipses, 'id' : id})
 
@@ -127,13 +143,22 @@ def delete_item(request, id):
     if not request.user.is_authenticated:
         return redirect('mylogin')
 
-    eclipses = Eclipses.objects.get(id=id)
+    try:
 
-    eclipses.delete()
+        eclipses = Eclipses.objects.get(id=id)
 
-    return redirect('eclipseTable')
+        eclipses.delete()
+
+        return redirect('eclipseTable')
+
+    except:
+
+        return render(request, 'back/500.html', {'id' : id})
 
 def add_year(request):
+
+    if not request.user.is_authenticated:
+        return redirect('mylogin')
 
     years = Years.objects.all().order_by('year')
 
@@ -141,21 +166,35 @@ def add_year(request):
 
         year = request.POST.get('year')
 
-        if year != "":
+        if year == "":
 
-            if year != None:
+            error = "Please, enter a year"
+            return render(request, 'back/error_page.html', {'error' : error})
+            
+        if len(Years.objects.filter(year=year)) != 0:
 
-                year = Years(year=str(year))
-                year.save()
+            error = "This year is already taken"
+            return render(request, 'back/error_page.html', {'error' : error})
 
-                return redirect('add_year')
+        year = Years(year=str(year))
+        year.save()
+        return redirect('add_year')
 
     return render(request, 'back/add_year.html', {'range' : range(2000, 2101), 'years' : years})
 
 def delete_year(request, year):
 
-    years = Years.objects.get(year=year)
+    if not request.user.is_authenticated:
+        return redirect('mylogin')
 
-    years.delete()
+    try:
 
-    return redirect('add_year')
+        years = Years.objects.get(year=year)
+
+        years.delete()
+
+        return redirect('add_year')
+    
+    except:
+
+        return render(request, 'back/500-year.html', {'year' : year})

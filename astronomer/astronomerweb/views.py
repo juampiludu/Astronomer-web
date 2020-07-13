@@ -15,11 +15,15 @@ def weight(request):
     return render(request, 'front/weight.html', {'sitename' : sitename})
 
 def nextEclipses(request, year):
-    years = Years.objects.all()
-    display = Years.objects.get(year=year)
-    sitename = 'Next Eclipses'
-    solarEclipse = Eclipses.objects.filter(solar_lunar='Solar')
-    lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar')
+    try:
+        years = Years.objects.all()
+        display = Years.objects.get(year=year)
+        sitename = 'Next Eclipses'
+        solarEclipse = Eclipses.objects.filter(solar_lunar='Solar')
+        lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar')
+    except:
+        sitename = '500 Server Error'
+        return render(request, 'front/500.html', {'year' : year, 'sitename' : sitename, 'years' : years})
     return render(request, 'front/next_eclipses.html', {'sitename' : sitename, 'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse, 'years' : years, 'display' : display, 'year' : year})
 
 def about(request):
