@@ -16,11 +16,11 @@ def weight(request):
 
 def nextEclipses(request, year):
     try:
-        years = Years.objects.all()
+        years = Years.objects.all().order_by('year')
         display = Years.objects.get(year=year)
         sitename = 'Next Eclipses'
-        solarEclipse = Eclipses.objects.filter(solar_lunar='Solar')
-        lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar')
+        solarEclipse = Eclipses.objects.filter(solar_lunar='Solar').order_by('eclipse_date')
+        lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar').order_by('eclipse_date')
     except:
         sitename = '500 Server Error'
         return render(request, 'front/500.html', {'year' : year, 'sitename' : sitename, 'years' : years})
@@ -31,9 +31,9 @@ def about(request):
     return render(request, 'front/about.html', {'sitename' : sitename})
 
 def mobileapp(request, year):
-    years = Years.objects.all()
+    years = Years.objects.all().order_by('year')
     display = Years.objects.get(year=year)
     sitename = 'Next Eclipses'
-    solarEclipse = Eclipses.objects.filter(solar_lunar='Solar')
-    lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar')
+    solarEclipse = Eclipses.objects.filter(solar_lunar='Solar').order_by('eclipse_date')
+    lunarEclipse = Eclipses.objects.filter(solar_lunar='Lunar').order_by('eclipse_date')
     return render(request, 'front/mobileapp.html', {'sitename' : sitename, 'solarEclipse' : solarEclipse, 'lunarEclipse' : lunarEclipse, 'years' : years, 'display' : display, 'year' : year})
