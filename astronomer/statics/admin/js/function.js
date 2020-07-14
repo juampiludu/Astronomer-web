@@ -12,6 +12,7 @@ $(document).ready(function () {
   /*$('.tooltipped').tooltip();*/
   M.updateTextFields();
   $('.dropdown-trigger').dropdown();
+  $('select').formSelect();
 });
 
 const earth = 9.807;

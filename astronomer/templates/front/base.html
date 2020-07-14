@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,7 +30,7 @@
   <nav>
     <div class="nav-wrapper" id="navbar">
       <a
-        href="/my-weight"
+        href="/"
         id="title"
         class="brand-logo show-on-medium-and-up"
         style="margin-left: 2%; background-color: #041138 !important;"
@@ -52,12 +54,12 @@
 
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li>
-          <a class="nav-text" href="/my-weight"
+          <a class="nav-text" href="/"
             ><i class="material-icons left"
               ><img
                 src="{% static 'admin/images/escala.png' %}"
                 width="24px" /></i
-            >My Weight</a
+            >{% trans "My Weight"%}</a
           >
         </li>
         <li>
@@ -66,7 +68,7 @@
               ><img
                 src="{% static 'admin/images/rueda-dentada.png' %}"
                 width="24px" /></i
-            >Next Eclipses</a
+            >{% trans "Next Eclipses"%}</a
           >
         </li>
         <li>
@@ -75,7 +77,7 @@
               ><img
                 src="{% static 'admin/images/signs.png' %}"
                 width="24px" /></i
-            >About</a
+            >{% trans "About"%}</a
           >
         </li>
       </ul>
@@ -104,15 +106,15 @@
           ><span class="white-text name"><b>Astronomer</b></span></a
         >
         <a href="#"
-          ><span class="white-text email">My weight on other planets!</span></a
+          ><span class="white-text email">{% trans "My weight on other planets!"%}</span></a
         >
       </div>
     </li>
     <li>
-      <a class="nav-text" href="/my-weight"
+      <a class="nav-text" href="/"
         ><i class="material-icons left"
           ><img src="{% static 'admin/images/escala.png' %}" width="24px" /></i
-        >My Weight</a
+        >{% trans "My Weight"%}</a
       >
     </li>
     <li>
@@ -121,14 +123,14 @@
           ><img
             src="{% static 'admin/images/rueda-dentada.png' %}"
             width="24px" /></i
-        >Next Eclipses</a
+        >{% trans "Next Eclipses"%}</a
       >
     </li>
     <li>
       <a class="nav-text" href="/about"
         ><i id="info-sidenav" class="material-icons left"
           ><img src="{% static 'admin/images/signs.png' %}" width="24px" /></i
-        >About</a
+        >{% trans "About"%}</a
       >
     </li>
   </ul>
@@ -149,10 +151,33 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Get the Android application</h5>
+          <h5 class="white-text">{% trans "Get the Android application" %}</h5>
           <a href=//astronomer.en.uptodown.com/android target="_blank" title="Download Astronomer" >
             <img src=https://stc.utdstc.com/img/download-uptodown2.png alt="Download Astronomer">
           </a>            
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <center>
+          <h6 class="white-text">{% trans "Select language:" %}</h6>
+          </center>
+          <form action="{% url 'set_language' %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ redirect_to }}">
+            <div class="input-field col s12">
+              <select name="language" id="lang-sel" class="browser-default">
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                  <option value="{{language.code}}" {% if language.code == LANGUAGE_CODE %} selected {% endif %} >
+                    {{ language.name_local }} ({{ language.code }})
+                  </option>
+                {% endfor %}
+              </select>
+              <br/>
+              <input id="btn-lang-submit" type="submit" value='{% trans "Select" %}'>
+            </div>
+          </form>
         </div>
       </div>
       <div class="footer-copyright">

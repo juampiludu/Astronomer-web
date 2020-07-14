@@ -3,16 +3,17 @@ from django.urls import path, include
 from astronomerweb import views
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
+    path('i18n/setlang', include('django.conf.urls.i18n')),
     path('astronomerAdmin/', admin.site.urls),
-    path('', views.principal),
-    path('my-weight/', views.weight),
-    path('next-eclipses/selected-year=<year>', views.nextEclipses, name='nextEclipses'),
-    path('about/', views.about),
-    path('X9VMTFaGCKp5WMp8HDL/selected-year=<year>', views.mobileapp, name='mobileapp'),
     path('astronomer-admin-panel/', include('adminpanel.urls')),
 ]
+
+urlpatterns += i18n_patterns (
+    path('', include('astronomerweb.urls'))
+)
 
 if settings.DEBUG:
 

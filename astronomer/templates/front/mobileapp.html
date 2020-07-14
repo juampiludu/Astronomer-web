@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +42,7 @@
     <div class="row container">
 
       <!-- Dropdown Trigger -->
-      <p class="grey-text text-darken-3 lighten-3">Select a year to display the eclipses:     
+      <p class="grey-text text-darken-3 lighten-3">{% trans "Select a year to display the eclipses:"%}     
         <a class='dropdown-trigger btn black-text white' href='#' data-target='dropdown1'>{{year}}</a>
       </p>
 
@@ -51,11 +53,9 @@
         {% endfor %}
       </ul>
 
-      <h2 class="header">Solar Eclipses in {{year}}</h2>
+      <h2 class="header">{% trans "Solar Eclipses in"%} {{year}}</h2>
       <p class="grey-text text-darken-3 lighten-3">
-        A solar eclipse occurs when a portion of the Earth is engulfed in a
-        shadow cast by the Moon which fully or partially blocks sunlight. This
-        occurs when the Sun, Moon and Earth are aligned.
+        {% trans "A solar eclipse occurs when a portion of the Earth is engulfed in a shadow cast by the Moon which fully or partially blocks sunlight. This occurs when the Sun, Moon and Earth are aligned."%}
       </p>
     </div>
   </div>
@@ -85,19 +85,19 @@
             <center>
               <img class="materialboxed" data-caption="Regions where the eclipse is visible" width="250" src="{{eclipse.eclipse_image_url}}">
               <div class="container">
-                <h5>Days left:</h5>
+                <h5>{% trans "Days left:"%}</h5>
                 <ul id="solar{{eclipse.id}}ul-countdown">
                   <li id="li-countdown">
-                    <span id="solar{{eclipse.id}}days"></span>days
+                    <span id="solar{{eclipse.id}}days"></span>{% trans "Days"%}
                   </li>
                   <li id="li-countdown">
-                    <span id="solar{{eclipse.id}}hours"></span>Hours
+                    <span id="solar{{eclipse.id}}hours"></span>{% trans "Hours"%}
                   </li>
                   <li id="li-countdown">
-                    <span id="solar{{eclipse.id}}minutes"></span>Minutes
+                    <span id="solar{{eclipse.id}}minutes"></span>{% trans "Minutes"%}
                   </li>
                   <li id="li-countdown">
-                    <span id="solar{{eclipse.id}}seconds"></span>Seconds
+                    <span id="solar{{eclipse.id}}seconds"></span>{% trans "Seconds"%}
                   </li>
                 </ul>
                 <p id="solar{{eclipse.id}}timedone" style="color: black;"></p>
@@ -127,13 +127,9 @@
   <!-- Lunar section -->
   <div class="section">
     <div class="row container">
-      <h2 class="header">Lunar Eclipses in {{year}}</h2>
+      <h2 class="header">{% trans "Lunar Eclipses in"%} {{year}}</h2>
       <p class="grey-text text-darken-3 lighten-3">
-        A lunar eclipse occurs when the Moon moves into the Earth's shadow. This
-        can occur only when the Sun, Earth, and Moon are exactly or very closely
-        aligned, with Earth between the other two. A lunar eclipse can occur
-        only on the night of a full moon. The type and length of a lunar eclipse
-        depend on the Moon's proximity to either node of its orbit.
+        {% trans "A lunar eclipse occurs when the Moon moves into the Earth's shadow. This can occur only when the Sun, Earth, and Moon are exactly or very closely aligned, with Earth between the other two. A lunar eclipse can occur only on the night of a full moon. The type and length of a lunar eclipse depend on the Moon's proximity to either node of its orbit."%}
       </p>
     </div>
   </div>
@@ -163,19 +159,19 @@
             <center>
             <img class="materialboxed" data-caption="Regions where the eclipse is visible" width="250" src="{{eclipse.eclipse_image_url}}">
             <div class="container">
-                <h5>Days left:</h5>
+                <h5>{% trans "Days left:"%}</h5>
                 <ul id="lunar{{eclipse.id}}ul-countdown">
                   <li id="li-countdown">
-                    <span id="lunar{{eclipse.id}}days"></span>days
+                    <span id="lunar{{eclipse.id}}days"></span>{% trans "Days"%}
                   </li>
                   <li id="li-countdown">
-                    <span id="lunar{{eclipse.id}}hours"></span>Hours
+                    <span id="lunar{{eclipse.id}}hours"></span>{% trans "Hours"%}
                   </li>
                   <li id="li-countdown">
-                    <span id="lunar{{eclipse.id}}minutes"></span>Minutes
+                    <span id="lunar{{eclipse.id}}minutes"></span>{% trans "Minutes"%}
                   </li>
                   <li id="li-countdown">
-                    <span id="lunar{{eclipse.id}}seconds"></span>Seconds
+                    <span id="lunar{{eclipse.id}}seconds"></span>{% trans "Seconds"%}
                   </li>
                 </ul>
                 <p id="lunar{{eclipse.id}}timedone" style="color: black;"></p>

@@ -1,0 +1,392 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-14 16:35-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/front/about.html:7
+msgid "The equation to know your weight in other planets is:"
+msgstr "La ecuación para saber tu peso en otros planetas es:"
+
+#: templates/front/about.html:14
+msgid "For example, in Mars:"
+msgstr "Por ejemplo, en Marte:"
+
+#: templates/front/about.html:24
+msgid ""
+"If you have any question or you want to report an issue, do not hesitate to "
+"contact us!"
+msgstr ""
+"Si tenés alguna pregunta o querés reportar algún problema, ¡no dudes en "
+"contactarnos!"
+
+#: templates/front/about.html:39
+msgid "Subject"
+msgstr "Asunto"
+
+#: templates/front/about.html:48
+msgid "Description"
+msgstr "Descripción"
+
+#: templates/front/about.html:56
+msgid "Send"
+msgstr "Enviar"
+
+#: templates/front/about.html:62
+msgid "Your message has been sent!"
+msgstr "Tu mensaje ha sido enviado!"
+
+#: templates/front/base.html:62 templates/front/base.html:117
+msgid "My Weight"
+msgstr "Mi Peso"
+
+#: templates/front/base.html:71 templates/front/base.html:126
+#: templates/front/weight.html:11
+msgid "Next Eclipses"
+msgstr "Próximos Eclipses"
+
+#: templates/front/base.html:80 templates/front/base.html:133
+msgid "About"
+msgstr "Acerca De"
+
+#: templates/front/base.html:109
+msgid "My weight on other planets!"
+msgstr "Mi peso en otros planetas!"
+
+#: templates/front/base.html:154
+msgid "Get the Android application"
+msgstr "Obtené la aplicación para Android"
+
+#: templates/front/base.html:160
+msgid "Select language:"
+msgstr "Seleccioná otro idioma:"
+
+#: templates/front/base.html:174
+msgid "Select"
+msgstr "Seleccionar"
+
+#: templates/front/mobileapp.html:45 templates/front/next_eclipses.html:9
+msgid "Select a year to display the eclipses:"
+msgstr "Seleccioná un año para mostrar los eclipses:"
+
+#: templates/front/mobileapp.html:56 templates/front/next_eclipses.html:20
+msgid "Solar Eclipses in"
+msgstr "Eclipses solares en"
+
+#: templates/front/mobileapp.html:58 templates/front/next_eclipses.html:22
+msgid ""
+"A solar eclipse occurs when a portion of the Earth is engulfed in a shadow "
+"cast by the Moon which fully or partially blocks sunlight. This occurs when "
+"the Sun, Moon and Earth are aligned."
+msgstr ""
+"Un eclipse solar ocurre cuando una porción de la Tierra es tapada por una "
+"sombra producida por la Luna, la cuál puede bloquear parcial o totalmente la "
+"lus solar. Ésto ocurre cuando el Sol, la Luna y la Tierra se ecuentran "
+"alineadas."
+
+#: templates/front/mobileapp.html:88 templates/front/mobileapp.html:162
+#: templates/front/next_eclipses.html:52 templates/front/next_eclipses.html:126
+msgid "Days left:"
+msgstr "Días restantes:"
+
+#: templates/front/mobileapp.html:91 templates/front/mobileapp.html:165
+#: templates/front/next_eclipses.html:55 templates/front/next_eclipses.html:129
+msgid "Days"
+msgstr "Días"
+
+#: templates/front/mobileapp.html:94 templates/front/mobileapp.html:168
+#: templates/front/next_eclipses.html:58 templates/front/next_eclipses.html:132
+msgid "Hours"
+msgstr "Horas"
+
+#: templates/front/mobileapp.html:97 templates/front/mobileapp.html:171
+#: templates/front/next_eclipses.html:61 templates/front/next_eclipses.html:135
+msgid "Minutes"
+msgstr "Minutos"
+
+#: templates/front/mobileapp.html:100 templates/front/mobileapp.html:174
+#: templates/front/next_eclipses.html:64 templates/front/next_eclipses.html:138
+msgid "Seconds"
+msgstr "Segundos"
+
+#: templates/front/mobileapp.html:130 templates/front/next_eclipses.html:94
+msgid "Lunar Eclipses in"
+msgstr "Eclipses Lunares en"
+
+#: templates/front/mobileapp.html:132 templates/front/next_eclipses.html:96
+msgid ""
+"A lunar eclipse occurs when the Moon moves into the Earth's shadow. This can "
+"occur only when the Sun, Earth, and Moon are exactly or very closely "
+"aligned, with Earth between the other two. A lunar eclipse can occur only on "
+"the night of a full moon. The type and length of a lunar eclipse depend on "
+"the Moon's proximity to either node of its orbit."
+msgstr ""
+"Un eclipse lunar ocurre cuando la Luna entra en la sombra de la Tierra. Esto "
+"solamente ocurre cuando el Sol, la Tierra, y la Luna están cercana o "
+"exactamente alineadas, con la Tierra entre las otras dos. Un eclipse lunar "
+"solo ocurre en noches de luna llena. El tipo y la duración de un eclipse "
+"lunar depende de la proximidad de la Luna con cualquier nodo de su órbita."
+
+#: templates/front/weight.html:6
+msgid ""
+"Now you can know, through this website, what is your weight on all planets "
+"of the solar system (included Moon!). The only think you have to do, is "
+"enter your weight in kilograms, press"
+msgstr ""
+"Ahora podés saber, mediante ésta página web, cuál es tu peso en todos los "
+"planetas del Sistema Solar (¡Incluida la Luna!). Lo único que tenés que "
+"hacer, es ingresar tu peso en kilogramos, presionar el botón"
+
+#: templates/front/weight.html:7 templates/front/weight.html:47
+msgid "CALCULATE!"
+msgstr "¡CALCULAR!"
+
+#: templates/front/weight.html:8
+msgid "button, and the results will be appear under each planet."
+msgstr ", y los resultados van a aparecer abajo de cada planeta."
+
+#: templates/front/weight.html:10
+msgid "You can also see the eclipses for this year by clicking in"
+msgstr ""
+"También podés ver los eclipses para este año haciendo click en la sección "
+
+#: templates/front/weight.html:12
+msgid "section."
+msgstr "."
+
+#: templates/front/weight.html:28
+msgid "Enter your weight in kg:"
+msgstr "Ingresá tu peso en kg:"
+
+#: templates/front/weight.html:55 templates/front/weight.html:145
+msgid "Mercury"
+msgstr "Mercurio"
+
+#: templates/front/weight.html:63 templates/front/weight.html:213
+msgid "Venus"
+msgstr "Venus"
+
+#: templates/front/weight.html:71 templates/front/weight.html:247
+msgid "Earth"
+msgstr "Tierra"
+
+#: templates/front/weight.html:79 templates/front/weight.html:281
+msgid "Moon"
+msgstr "Luna"
+
+#: templates/front/weight.html:87 templates/front/weight.html:315
+msgid "Mars"
+msgstr "Marte"
+
+#: templates/front/weight.html:95 templates/front/weight.html:349
+msgid "Jupiter"
+msgstr "Júpiter"
+
+#: templates/front/weight.html:103 templates/front/weight.html:383
+msgid "Saturn"
+msgstr "Saturno"
+
+#: templates/front/weight.html:111 templates/front/weight.html:417
+msgid "Uranus"
+msgstr "Urano"
+
+#: templates/front/weight.html:119 templates/front/weight.html:451
+msgid "Neptune"
+msgstr "Neptuno"
+
+#: templates/front/weight.html:127 templates/front/weight.html:179
+msgid "Pluto"
+msgstr "Plutón"
+
+#: templates/front/weight.html:150
+msgid ""
+"Mercury is the smallest and innermost planet in the Solar System. Its orbit "
+"around the Sun takes 87.97 days, the shortest of all the planets in the "
+"Solar System. It is named after the Roman deity Mercury, the messenger of "
+"the gods. More on Wikipedia..."
+msgstr ""
+"Mercurio es el planeta más pequeño y adentrado del Sistema Solar. Su órbita "
+"alrededor del Sol toma 87,97 días, el ciclo más corto en el Sistema Solar. "
+"Su nombre proviene de la deidad romana Mercurio, el mensajero de los dioses. "
+"Más en Wikipedia..."
+
+#: templates/front/weight.html:161 templates/front/weight.html:195
+#: templates/front/weight.html:229 templates/front/weight.html:263
+#: templates/front/weight.html:297 templates/front/weight.html:331
+#: templates/front/weight.html:365 templates/front/weight.html:399
+#: templates/front/weight.html:433 templates/front/weight.html:467
+msgid "Back"
+msgstr "Atrás"
+
+#: templates/front/weight.html:168 templates/front/weight.html:202
+#: templates/front/weight.html:236 templates/front/weight.html:270
+#: templates/front/weight.html:304 templates/front/weight.html:338
+#: templates/front/weight.html:372 templates/front/weight.html:406
+#: templates/front/weight.html:440 templates/front/weight.html:474
+msgid "Go to Wikipedia"
+msgstr "Ir a Wikipedia"
+
+#: templates/front/weight.html:184
+msgid ""
+"Pluto (minor planet designation: 134340 Pluto) is an icy dwarf planet in the "
+"Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was the first "
+"and the largest Kuiper belt object to be discovered. More on Wikipedia..."
+msgstr ""
+"Plutón es una planeta helado enano en el cinturón de Kuiper, un anillo de "
+"cuerpos más allá de la órbita de Neptuno. Fué el primer y más grande objeto "
+"del cinturón de Kuiper en ser descubierto. Más en Wikipedia..."
+
+#: templates/front/weight.html:218
+msgid ""
+"Venus is the second planet from the Sun. It is named after the Roman goddess "
+"of love and beauty. As the second-brightest natural object in the night sky "
+"after the Moon, Venus can cast shadows and, rarely, is visible to the naked "
+"eye in broad daylight. More on Wikipedia..."
+msgstr ""
+"Venus es el segundo planeta contando desde el Sol. Su nombre proviene de la "
+"diosa romana del amor y la belleza. Cómo segundo objeto natural más "
+"brillante en cielo nocturno después de la Luna, Venus puede producir sombra, "
+"y, raramente, es visible a simple vista durante el día. Más en Wikipedia..."
+
+#: templates/front/weight.html:252
+msgid ""
+"Earth is the third planet from the Sun and the only astronomical object "
+"known to harbor life. According to radiometric dating and other evidence, "
+"Earth formed over 4.5 billion years ago. Earth's gravity interacts with "
+"other objects in space, especially the Sun and the Moon, which is Earth's "
+"only natural satellite. Earth orbits around the Sun in 365.256 solar days, a "
+"period known as an Earth sidereal year. During this time, Earth rotates "
+"about its axis 366.256 times, that is, a sidereal year has 366.256 sidereal "
+"days. More on Wikipedia..."
+msgstr ""
+"La Tierra es el tercer planeta contando desde el Sol, y el único objeto "
+"astrónomico conocido en albergar vida. Conforme con los datos radiométricos "
+"y otras evidencias, la Tierra se formó hace 4,5 mil millones de años. La "
+"gravedad de la Tierra interactúa con otros objectos en el espacio, "
+"especialmente con el Sol y la Luna, la cuál es el único satélite natural que "
+"posee la Tierra. La Tierra orbita alrededor del Sol en 365,256 días, período "
+"conocido cómo año sideral terrestre. Durante éste tiempo, la Tierra rota "
+"aproximadamente unas 366,256 veces, es decir, un año sideral tiene 366,256 "
+"días siderales. Más en Wikipedia..."
+
+#: templates/front/weight.html:286
+msgid ""
+"The Moon is an astronomical body orbiting Earth as its only natural "
+"satellite. It is the fifth-largest satellite in the Solar System, and by far "
+"the largest among planetary satellites relative to the size of the planet "
+"that it orbits (its primary). The Moon is, after Jupiter's satellite Io, the "
+"second-densest satellite in the Solar System among those whose densities are "
+"known. More on Wikipedia..."
+msgstr ""
+"La Luna es un cuerpo astronómico que orbita la Tierra como su único satélite "
+"natural. Es el quinto satélite más grande del Sistema Solar y, con mucho, el "
+"más grande entre los satélites planetarios en relación con el tamaño del "
+"planeta que orbita (su primario). La Luna es, después del satélite Io de "
+"Júpiter, el segundo satélite más denso del Sistema Solar entre aquellos "
+"cuyas densidades son conocidas. Más en Wikipedia ..."
+
+#: templates/front/weight.html:320
+msgid ""
+"Mars is the fourth planet from the Sun and the second-smallest planet in the "
+"Solar System after Mercury. In English, Mars carries the name of the Roman "
+"god of war and is often referred to as the 'Red Planet'. More on Wikipedia..."
+msgstr ""
+"Marte es el cuarto planeta desde el Sol y el segundo planeta más pequeño del "
+"Sistema Solar después de Mercurio. En inglés, Marte lleva el nombre del dios "
+"romano de la guerra y a menudo se lo conoce como el \"Planeta Rojo\". Más en "
+"Wikipedia..."
+
+#: templates/front/weight.html:354
+msgid ""
+"Jupiter is the fifth planet from the Sun and the largest in the Solar "
+"System. It is a gas giant with a mass one-thousandth that of the Sun, but "
+"two-and-a-half times that of all the other planets in the Solar System "
+"combined. Jupiter is one of the brightest objects visible to the naked eye "
+"in the night sky, and has been known to ancient civilizations since before "
+"recorded history. It is named after the Roman god Jupiter. When viewed from "
+"Earth, Jupiter can be bright enough for its reflected light to cast shadows, "
+"and is on average the third-brightest natural object in the night sky after "
+"the Moon and Venus. More on Wikipedia..."
+msgstr ""
+"Júpiter es el quinto planeta desde el Sol y el más grande en el Sistema "
+"Solar. Es un gigante gaseoso con una masa una milésima de la del Sol, pero "
+"dos veces y media la de todos los demás planetas del Sistema Solar juntos. "
+"Júpiter es uno de los objetos más brillantes visibles a simple vista en el "
+"cielo nocturno, y ha sido conocido por las civilizaciones antiguas desde "
+"antes de la historia recordada. Lleva el nombre del dios romano Júpiter. "
+"Cuando se ve desde la Tierra, Júpiter puede ser lo suficientemente brillante "
+"como para que su luz reflejada arroje sombras, y es, en promedio, el tercer "
+"objeto natural más brillante en el cielo nocturno después de la Luna y "
+"Venus. Más en Wikipedia..."
+
+#: templates/front/weight.html:388
+msgid ""
+"Saturn is the sixth planet from the Sun and the second-largest in the Solar "
+"System, after Jupiter. It is a gas giant with an average radius of about "
+"nine times that of Earth. It only has one-eighth the average density of "
+"Earth; however, with its larger volume, Saturn is over 95 times more "
+"massive. Saturn is named after the Roman god of wealth and agriculture; its "
+"astronomical symbol (♄) represents the god's sickle. More on Wikipedia..."
+msgstr ""
+"Saturno es el sexto planeta desde el Sol y el segundo más grande en el "
+"Sistema Solar, después de Júpiter. Es un gigante gaseoso con un radio "
+"promedio de aproximadamente nueve veces la de la Tierra. Solo tiene un "
+"octavo de la densidad promedio de la Tierra; Sin embargo, con su mayor "
+"volumen, Saturno es más de 95 veces más masivo. Saturno lleva el nombre del "
+"dios romano de la riqueza y la agricultura; su símbolo astronómico (♄) "
+"representa la hoz del dios. Más en Wikipedia..."
+
+#: templates/front/weight.html:422
+msgid ""
+"Uranus is the seventh planet from the Sun. It has the third-largest "
+"planetary radius and fourth-largest planetary mass in the Solar System. "
+"Uranus is similar in composition to Neptune, and both have bulk chemical "
+"compositions which differ from that of the larger gas giants Jupiter and "
+"Saturn. For this reason, scientists often classify Uranus and Neptune as ice "
+"giants to distinguish them from the gas giants. More on Wikipedia..."
+msgstr ""
+"Urano es el séptimo planeta desde el Sol. Tiene la tercera más grande radio "
+"planetario y cuarta masa planetaria más grande en el Sistema Solar. Urano es "
+"similar en composición a Neptuno, y ambos tienen químicos a granel "
+"composiciones que difieren de la de los gigantes gaseosos más grandes "
+"Júpiter y Saturno. Por esta razón, los científicos a menudo clasifican a "
+"Urano y Neptuno como gigantes de hielo para distinguirlos de los gigantes "
+"gaseosos. Más en Wikipedia..."
+
+#: templates/front/weight.html:456
+msgid ""
+"Neptune is the eighth and farthest known planet from the Sun in the Solar "
+"System. In the Solar System, it is the fourth-largest planet by diameter, "
+"the third-most-massive planet, and the densest giant planet. Neptune is 17 "
+"times the mass of Earth, slightly more massive than its near-twin Uranus. "
+"Neptune is denser and physically smaller than Uranus because its greater "
+"mass causes more gravitational compression of its atmosphere. Neptune orbits "
+"the Sun once every 164.8 years at an average distance of 30.1 AU (4.5 "
+"billion km; 2.8 billion mi). It is named after the Roman god of the sea and "
+"has the astronomical symbol ♆, a stylised version of the god Neptune's "
+"trident. More on Wikipedia..."
+msgstr ""
+"Neptuno es el octavo y más lejano planeta conocido del Sol en el Sistema "
+"Solar. En el Sistema Solar, es el cuarto planeta más grande por diámetro, el "
+"tercer planeta más masivo y el planeta gigante más denso. Neptuno tiene 17 "
+"veces la masa de la Tierra, un poco más masiva que su casi gemelo Urano. "
+"Neptuno es más denso y físicamente más pequeño que Urano porque su mayor "
+"masa provoca una mayor compresión gravitacional de su atmósfera. Neptuno "
+"orbita el Sol una vez cada 164,8 años a una distancia promedio de 30,1 UA "
+"(4,5 mil millones de km; 2,8 mil millones de millas). Lleva el nombre del "
+"dios romano del mar y tiene el símbolo astronómico ♆, una versión estilizada "
+"del tridente del dios Neptuno. Más en Wikipedia..."

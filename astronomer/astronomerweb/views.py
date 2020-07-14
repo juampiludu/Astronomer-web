@@ -5,10 +5,6 @@ from datetime import datetime
 
 # Create your views here.
 
-def principal(request):
-    sitename = 'Astromomer'
-    return redirect('/my-weight', {'sitename' : sitename})
-
 def weight(request):
     sitename = 'My Weight'
     #current_year = datetime.now().year
