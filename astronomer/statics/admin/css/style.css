@@ -379,3 +379,7 @@ p {
 .dropdown-trigger {
   margin-left: 20px;
 }
+
+#github-link:hover {
+  text-decoration: underline;
+}
