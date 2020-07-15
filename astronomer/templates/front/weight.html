@@ -136,6 +136,8 @@
 
   <!-- Modals -->
 
+  {% get_current_language as LANGUAGE_CODE %}
+
   <div
     id="modal-mercury"
     class="modal modal-fixed-footer center-align"
@@ -161,7 +163,11 @@
         >{% trans "Back"%}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Mercurio_(planeta)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -195,7 +201,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Pluto"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Plut%C3%B3n_(planeta_enano)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -229,7 +239,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Venus"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Venus_(planeta)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -263,7 +277,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Earth"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Tierra"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -297,7 +315,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Moon"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Luna"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -331,7 +353,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Mars"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Marte_(planeta)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -365,7 +391,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Jupiter"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/J%C3%BApiter_(planeta)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -399,7 +429,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Saturn"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Saturno_(planeta)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -433,7 +467,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Uranus"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Urano_(planeta)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"
@@ -467,7 +505,11 @@
         >{% trans "Back" %}</a
       >
       <a
+        {% if LANGUAGE_CODE == 'en' %}
         href="https://en.wikipedia.org/wiki/Neptune"
+        {% else %}
+        href="https://es.wikipedia.org/wiki/Neptuno_(planeta)"
+        {% endif %}
         target="_blank"
         class="waves-effect waves-blue btn-flat"
         style="background-color: white; color: #041138;"

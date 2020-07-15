@@ -27,9 +27,8 @@ function downCount(solorlunid) {
       if (distance < 0) {
         $(document).ready(function () {
           $("#" + solorlunid + "ul-countdown").remove();
-          if (distance > -864000 && distance < 864000) {
-            $("#" + solorlunid + "timedone").text("It's today!");
-          } else {
+          $("#" + solorlunid + "timedone").text("It's happening!"); 
+          if (distance < -18000000) {
             $("#" + solorlunid + "timedone").text("The event has ended");
           }
         });
