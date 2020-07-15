@@ -95,7 +95,7 @@ msgid ""
 msgstr ""
 "Un eclipse solar ocurre cuando una porción de la Tierra es tapada por una "
 "sombra producida por la Luna, la cuál puede bloquear parcial o totalmente la "
-"lus solar. Ésto ocurre cuando el Sol, la Luna y la Tierra se ecuentran "
+"luz solar. Ésto ocurre cuando el Sol, la Luna y la Tierra se ecuentran "
 "alineadas."
 
 #: templates/front/mobileapp.html:88 templates/front/mobileapp.html:162
