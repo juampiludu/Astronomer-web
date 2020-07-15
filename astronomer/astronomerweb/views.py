@@ -6,6 +6,9 @@ from django.utils.translation import gettext_lazy as _
 
 # Create your views here.
 
+def mobileapp_safe_passage(request):
+    return redirect('mobileapp', year=2020)
+
 def weight(request):
     sitename = _('My Weight')
     #current_year = datetime.now().year

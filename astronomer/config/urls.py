@@ -8,6 +8,7 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = [
     path('i18n/setlang', include('django.conf.urls.i18n')),
     path('astronomerAdmin/', admin.site.urls),
+    path('X9VMTFaGCKp5WMp8HDL/', views.mobileapp_safe_passage),
     path('astronomer-admin-panel/', include('adminpanel.urls')),
 ]
 
