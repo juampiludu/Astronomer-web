@@ -160,12 +160,12 @@
           <center>
           <h6 class="white-text">{% trans "Select language:" %}</h6>
           </center>
+          {% get_current_language as LANGUAGE_CODE %}
           <form action="{% url 'set_language' %}" method="POST">
             {% csrf_token %}
-            <input type="hidden" name="next" value="{{ redirect_to }}">
+            <input type="hidden" name="next" value="{{ request.get_full_path|slice:'3:' }}">
             <div class="input-field col s12">
               <select name="language" id="lang-sel" class="browser-default">
-                {% get_current_language as LANGUAGE_CODE %}
                 {% get_available_languages as LANGUAGES %}
                 {% get_language_info_list for LANGUAGES as languages %}
                 {% for language in languages %}

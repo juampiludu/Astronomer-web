@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-14 16:35-0300\n"
+"POT-Creation-Date: 2020-07-14 21:15-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: astronomerweb/views.py:10 templates/front/base.html:62
+#: templates/front/base.html:117
+msgid "My Weight"
+msgstr "Mi Peso"
+
+#: astronomerweb/views.py:18 astronomerweb/views.py:33
+#: templates/front/base.html:71 templates/front/base.html:126
+#: templates/front/weight.html:11
+msgid "Next Eclipses"
+msgstr "Próximos Eclipses"
+
+#: astronomerweb/views.py:27 templates/front/base.html:80
+#: templates/front/base.html:133
+msgid "About"
+msgstr "Acerca De"
 
 #: templates/front/about.html:7
 msgid "The equation to know your weight in other planets is:"
@@ -48,34 +64,21 @@ msgstr "Enviar"
 
 #: templates/front/about.html:62
 msgid "Your message has been sent!"
-msgstr "Tu mensaje ha sido enviado!"
-
-#: templates/front/base.html:62 templates/front/base.html:117
-msgid "My Weight"
-msgstr "Mi Peso"
-
-#: templates/front/base.html:71 templates/front/base.html:126
-#: templates/front/weight.html:11
-msgid "Next Eclipses"
-msgstr "Próximos Eclipses"
-
-#: templates/front/base.html:80 templates/front/base.html:133
-msgid "About"
-msgstr "Acerca De"
+msgstr "¡Tu mensaje ha sido enviado!"
 
 #: templates/front/base.html:109
 msgid "My weight on other planets!"
-msgstr "Mi peso en otros planetas!"
+msgstr "¡Mi peso en otros planetas!"
 
 #: templates/front/base.html:154
 msgid "Get the Android application"
 msgstr "Obtené la aplicación para Android"
 
-#: templates/front/base.html:160
+#: templates/front/base.html:161
 msgid "Select language:"
 msgstr "Seleccioná otro idioma:"
 
-#: templates/front/base.html:174
+#: templates/front/base.html:178
 msgid "Select"
 msgstr "Seleccionar"
 
