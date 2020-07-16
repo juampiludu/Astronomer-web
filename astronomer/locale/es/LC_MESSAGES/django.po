@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-14 21:15-0300\n"
+"POT-Creation-Date: 2020-07-16 11:02-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: astronomerweb/views.py:10 templates/front/base.html:62
+#: astronomerweb/views.py:13 templates/front/base.html:62
 #: templates/front/base.html:117
 msgid "My Weight"
 msgstr "Mi Peso"
 
-#: astronomerweb/views.py:18 astronomerweb/views.py:33
+#: astronomerweb/views.py:21 astronomerweb/views.py:36
 #: templates/front/base.html:71 templates/front/base.html:126
 #: templates/front/weight.html:11
 msgid "Next Eclipses"
 msgstr "Próximos Eclipses"
 
-#: astronomerweb/views.py:27 templates/front/base.html:80
+#: astronomerweb/views.py:30 templates/front/base.html:80
 #: templates/front/base.html:133
 msgid "About"
 msgstr "Acerca De"
+
+#: templates/front/500.html:8 templates/front/mobileapp.html:45
+#: templates/front/next_eclipses.html:9
+msgid "Select a year to display the eclipses:"
+msgstr "Seleccioná un año para mostrar los eclipses:"
+
+#: templates/front/500.html:19
+msgid "The year selected isn't available yet. Try selecting another one."
+msgstr "El año seleccionado todavía no se encuentra disponible. Probá seleccionando otro año."
 
 #: templates/front/about.html:7
 msgid "The equation to know your weight in other planets is:"
@@ -74,17 +83,13 @@ msgstr "¡Mi peso en otros planetas!"
 msgid "Get the Android application"
 msgstr "Obtené la aplicación para Android"
 
-#: templates/front/base.html:161
+#: templates/front/base.html:168
 msgid "Select language:"
 msgstr "Seleccioná otro idioma:"
 
-#: templates/front/base.html:178
+#: templates/front/base.html:185
 msgid "Select"
 msgstr "Seleccionar"
-
-#: templates/front/mobileapp.html:45 templates/front/next_eclipses.html:9
-msgid "Select a year to display the eclipses:"
-msgstr "Seleccioná un año para mostrar los eclipses:"
 
 #: templates/front/mobileapp.html:56 templates/front/next_eclipses.html:20
 msgid "Solar Eclipses in"
@@ -175,47 +180,47 @@ msgstr "."
 msgid "Enter your weight in kg:"
 msgstr "Ingresá tu peso en kg:"
 
-#: templates/front/weight.html:55 templates/front/weight.html:145
+#: templates/front/weight.html:55 templates/front/weight.html:147
 msgid "Mercury"
 msgstr "Mercurio"
 
-#: templates/front/weight.html:63 templates/front/weight.html:213
+#: templates/front/weight.html:63 templates/front/weight.html:223
 msgid "Venus"
 msgstr "Venus"
 
-#: templates/front/weight.html:71 templates/front/weight.html:247
+#: templates/front/weight.html:71 templates/front/weight.html:261
 msgid "Earth"
 msgstr "Tierra"
 
-#: templates/front/weight.html:79 templates/front/weight.html:281
+#: templates/front/weight.html:79 templates/front/weight.html:299
 msgid "Moon"
 msgstr "Luna"
 
-#: templates/front/weight.html:87 templates/front/weight.html:315
+#: templates/front/weight.html:87 templates/front/weight.html:337
 msgid "Mars"
 msgstr "Marte"
 
-#: templates/front/weight.html:95 templates/front/weight.html:349
+#: templates/front/weight.html:95 templates/front/weight.html:375
 msgid "Jupiter"
 msgstr "Júpiter"
 
-#: templates/front/weight.html:103 templates/front/weight.html:383
+#: templates/front/weight.html:103 templates/front/weight.html:413
 msgid "Saturn"
 msgstr "Saturno"
 
-#: templates/front/weight.html:111 templates/front/weight.html:417
+#: templates/front/weight.html:111 templates/front/weight.html:451
 msgid "Uranus"
 msgstr "Urano"
 
-#: templates/front/weight.html:119 templates/front/weight.html:451
+#: templates/front/weight.html:119 templates/front/weight.html:489
 msgid "Neptune"
 msgstr "Neptuno"
 
-#: templates/front/weight.html:127 templates/front/weight.html:179
+#: templates/front/weight.html:127 templates/front/weight.html:185
 msgid "Pluto"
 msgstr "Plutón"
 
-#: templates/front/weight.html:150
+#: templates/front/weight.html:152
 msgid ""
 "Mercury is the smallest and innermost planet in the Solar System. Its orbit "
 "around the Sun takes 87.97 days, the shortest of all the planets in the "
@@ -227,23 +232,23 @@ msgstr ""
 "Su nombre proviene de la deidad romana Mercurio, el mensajero de los dioses. "
 "Más en Wikipedia..."
 
-#: templates/front/weight.html:161 templates/front/weight.html:195
-#: templates/front/weight.html:229 templates/front/weight.html:263
-#: templates/front/weight.html:297 templates/front/weight.html:331
-#: templates/front/weight.html:365 templates/front/weight.html:399
-#: templates/front/weight.html:433 templates/front/weight.html:467
+#: templates/front/weight.html:163 templates/front/weight.html:201
+#: templates/front/weight.html:239 templates/front/weight.html:277
+#: templates/front/weight.html:315 templates/front/weight.html:353
+#: templates/front/weight.html:391 templates/front/weight.html:429
+#: templates/front/weight.html:467 templates/front/weight.html:505
 msgid "Back"
 msgstr "Atrás"
 
-#: templates/front/weight.html:168 templates/front/weight.html:202
-#: templates/front/weight.html:236 templates/front/weight.html:270
-#: templates/front/weight.html:304 templates/front/weight.html:338
-#: templates/front/weight.html:372 templates/front/weight.html:406
-#: templates/front/weight.html:440 templates/front/weight.html:474
+#: templates/front/weight.html:174 templates/front/weight.html:212
+#: templates/front/weight.html:250 templates/front/weight.html:288
+#: templates/front/weight.html:326 templates/front/weight.html:364
+#: templates/front/weight.html:402 templates/front/weight.html:440
+#: templates/front/weight.html:478 templates/front/weight.html:516
 msgid "Go to Wikipedia"
 msgstr "Ir a Wikipedia"
 
-#: templates/front/weight.html:184
+#: templates/front/weight.html:190
 msgid ""
 "Pluto (minor planet designation: 134340 Pluto) is an icy dwarf planet in the "
 "Kuiper belt, a ring of bodies beyond the orbit of Neptune. It was the first "
@@ -253,7 +258,7 @@ msgstr ""
 "cuerpos más allá de la órbita de Neptuno. Fué el primer y más grande objeto "
 "del cinturón de Kuiper en ser descubierto. Más en Wikipedia..."
 
-#: templates/front/weight.html:218
+#: templates/front/weight.html:228
 msgid ""
 "Venus is the second planet from the Sun. It is named after the Roman goddess "
 "of love and beauty. As the second-brightest natural object in the night sky "
@@ -265,7 +270,7 @@ msgstr ""
 "brillante en cielo nocturno después de la Luna, Venus puede producir sombra, "
 "y, raramente, es visible a simple vista durante el día. Más en Wikipedia..."
 
-#: templates/front/weight.html:252
+#: templates/front/weight.html:266
 msgid ""
 "Earth is the third planet from the Sun and the only astronomical object "
 "known to harbor life. According to radiometric dating and other evidence, "
@@ -286,7 +291,7 @@ msgstr ""
 "aproximadamente unas 366,256 veces, es decir, un año sideral tiene 366,256 "
 "días siderales. Más en Wikipedia..."
 
-#: templates/front/weight.html:286
+#: templates/front/weight.html:304
 msgid ""
 "The Moon is an astronomical body orbiting Earth as its only natural "
 "satellite. It is the fifth-largest satellite in the Solar System, and by far "
@@ -302,7 +307,7 @@ msgstr ""
 "Júpiter, el segundo satélite más denso del Sistema Solar entre aquellos "
 "cuyas densidades son conocidas. Más en Wikipedia ..."
 
-#: templates/front/weight.html:320
+#: templates/front/weight.html:342
 msgid ""
 "Mars is the fourth planet from the Sun and the second-smallest planet in the "
 "Solar System after Mercury. In English, Mars carries the name of the Roman "
@@ -313,7 +318,7 @@ msgstr ""
 "romano de la guerra y a menudo se lo conoce como el \"Planeta Rojo\". Más en "
 "Wikipedia..."
 
-#: templates/front/weight.html:354
+#: templates/front/weight.html:380
 msgid ""
 "Jupiter is the fifth planet from the Sun and the largest in the Solar "
 "System. It is a gas giant with a mass one-thousandth that of the Sun, but "
@@ -336,7 +341,7 @@ msgstr ""
 "objeto natural más brillante en el cielo nocturno después de la Luna y "
 "Venus. Más en Wikipedia..."
 
-#: templates/front/weight.html:388
+#: templates/front/weight.html:418
 msgid ""
 "Saturn is the sixth planet from the Sun and the second-largest in the Solar "
 "System, after Jupiter. It is a gas giant with an average radius of about "
@@ -353,7 +358,7 @@ msgstr ""
 "dios romano de la riqueza y la agricultura; su símbolo astronómico (♄) "
 "representa la hoz del dios. Más en Wikipedia..."
 
-#: templates/front/weight.html:422
+#: templates/front/weight.html:456
 msgid ""
 "Uranus is the seventh planet from the Sun. It has the third-largest "
 "planetary radius and fourth-largest planetary mass in the Solar System. "
@@ -370,7 +375,7 @@ msgstr ""
 "Urano y Neptuno como gigantes de hielo para distinguirlos de los gigantes "
 "gaseosos. Más en Wikipedia..."
 
-#: templates/front/weight.html:456
+#: templates/front/weight.html:494
 msgid ""
 "Neptune is the eighth and farthest known planet from the Sun in the Solar "
 "System. In the Solar System, it is the fourth-largest planet by diameter, "

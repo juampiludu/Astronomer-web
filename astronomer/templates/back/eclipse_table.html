@@ -38,31 +38,54 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Title</th>
-                    <th>Eclipse Type</th>
-                    <th>Information</th>
                     <th>Date</th>
+                    <th>Image</th>
+                    <th>Eclipse Type</th>
+                    <th>Title</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                   {% for e in eclipses %}
                   <tr>
-                    <td><a href="{% url 'edit_eclipse' id=e.id %}">{{e.eclipse_title}}</a>
-                    </td>
-                    <td>{{e.solar_lunar}}</td>
-                    <td>{{e.eclipse_info|safe}}</td>
                     <td>{{e.eclipse_date}}</td>
-                    <td><a href="{% url 'delete_item' id=e.id %}"><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></a></td>
+                    <td><img src="{{e.eclipse_image_url}}" alt="Avatar" height="60"></td>
+                    <td>{{e.solar_lunar}}</td>
+                    <td>{{e.eclipse_title}}</td>
+                    <td>
+                      <a href="{% url 'edit_eclipse' id=e.id %}"><button type="button" class="btn btn-block btn-default btn-xs">Edit</button></a>
+                      <br/>
+                      <button type="button" data-toggle="modal" data-target="#deleteModal" class="btn btn-block btn-danger btn-xs">Delete</button>
+                    </td>
                   </tr>
+                  <!-- Modal -->
+                  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Delete Item</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Are you sure to delete "{{e.solar_lunar}} Eclipse - {{e.eclipse_title}}"?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <a href="{% url 'delete_item' id=e.id %}"><button type="button" class="btn btn-danger">Delete</button></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   {% endfor %}
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Title</th>
-                    <th>Eclipse Type</th>
-                    <th>Information</th>
                     <th>Date</th>
+                    <th>Image</th>
+                    <th>Eclipse Type</th>
+                    <th>Title</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>

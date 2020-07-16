@@ -153,14 +153,21 @@ nav ul li.active a.nav-text {
 #div2-about {
   background-color: #121212;
   margin-top: 60px;
-  max-width: 400px;
+  max-width: 500px;
   margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 2px #1b1b1b;
 }
 
 #div3-about {
-  max-width: 300px;
+  max-width: 500px;
+  display: block;
+}
+
+#form1-about {
+  margin: 20px;
 }
 
 #action {
@@ -334,8 +341,15 @@ p {
   min-width: 400px;
   max-width: 800px;
   margin-top: 30px;
+  margin-bottom: 40px;
   border-radius: 8px;
   box-shadow: 0 2px 2px #242424;
+  display: block;
+}
+
+#info_paragraph {
+  display: inline-block;
+  margin: 10px;
 }
 
 /* Countdown */

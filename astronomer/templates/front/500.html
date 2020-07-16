@@ -1,11 +1,12 @@
 {% extends 'front/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 <body>
     <div id="site-wrapper-500">
         <center>
             <!-- Dropdown Trigger -->
-            <p class="grey-text text-darken-3 lighten-3">Select a year to display the eclipses:     
+            <p class="grey-text text-darken-3 lighten-3">{% trans "Select a year to display the eclipses:" %}     
                 <a class='dropdown-trigger btn black-text white' href='#' data-target='dropdown1'>{{year}}</a>
             </p>
 
@@ -16,7 +17,7 @@
                 {% endfor %}
             </ul>
             <h1>500</h1>
-            <p class="grey-text text-darken-3 lighten-3">The year selected isn't available yet. Try selecting another one.</p>
+            <p class="grey-text text-darken-3 lighten-3">{% trans "The year selected isn't available yet. Try selecting another one." %}</p>
         </center>
     </div>
 </body>
